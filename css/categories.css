@@ -1,0 +1,19 @@
+#onclick {
+	width: 78px;
+}
+
+#created_at {
+	width: 14%;
+}
+
+.date {
+	text-align: center;
+}
+
+a { text-decoration: none; }
+.topic:hover { background-color: ghostwhite; }
+.topic h3 { color: gray;}
+
+.topic {
+	padding: 1%;
+}

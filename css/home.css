@@ -1,0 +1,11 @@
+#categories {
+	margin-top: 5%;
+}
+
+#onclick {
+	width: 113px;
+}
+
+a { text-decoration: none; }
+.category:hover { background-color: ghostwhite; }
+.category h3 { text-decoration: underline; }
