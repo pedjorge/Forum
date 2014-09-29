@@ -12,7 +12,7 @@
             <div id="header">
                 <div class="logo_title">
                     <div class="logo">
-                        <a href="#"><img class="logo" src="img/logo.png"></a>
+                        <a href="home.php"><img class="logo" src="img/logo.png"></a>
                     </div>
                     <div class="title">
                         <a href="home.php"><h1><em><b>Forum</b></em></h1></a>
@@ -25,11 +25,13 @@
             </div>
             <div id="navigation">
                 <ul id="navigation_items">
-                    <li class="Starred_topics menu_item">
-                        <a href="#" class="menu_item_link"><p>Starred topics</p></a>
-                    </li>
                     <li class="Forums menu_item">
-                        <a href="#" class="menu_item_link"><p>Forums</p></a>
+                        <img id="menu_image" src="img/home.jpg">
+                        <a href="home.php" class="menu_item_link"><p>Forums</p></a>
+                    </li>
+                    <li class="Starred_topics menu_item">
+                        <img id="menu_image" src="img/starred.png">
+                        <a href="#" class="menu_item_link"><p>Starred topics</p></a>
                     </li>
                     <li class="Topics menu_item" style="background-color: lightgrey;">
                         <a href="#" class="menu_item_link"><p style="color:white;">Topics</p></a>

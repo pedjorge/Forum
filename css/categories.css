@@ -10,9 +10,12 @@
 	text-align: center;
 }
 
+.add {
+	margin-right: 5.2%;
+}
+
 a { text-decoration: none; }
 .topic:hover { background-color: ghostwhite; }
-.topic h3 { color: gray;}
 
 .topic {
 	padding: 1%;

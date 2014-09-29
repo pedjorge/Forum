@@ -113,6 +113,11 @@ li:last-child {
 	color: white;
 }
 
+#menu_image {
+	margin: 5px 10px 6px 17px;
+	float: left;
+}
+
 #footer {
 	padding: 3%;
 	font-family: 'Lato', serif;
