@@ -45,7 +45,7 @@
         </div>
         <div id="container">
             <div id="content">
-            <h2 id="category_name">All Topics</h2>
+            <h2>All Topics</h2>
             <?php include 'php_support/show_all_topics.php'; ?>
             </div>
         </div>

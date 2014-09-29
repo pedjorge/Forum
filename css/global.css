@@ -136,6 +136,7 @@ li:last-child {
 	width: 100%;
 	overflow: auto;
 	margin-bottom: 6%;
+	padding-top: 13px;
 }
 
 table {
@@ -167,8 +168,12 @@ table p {
 }
 
 h2 {
-	padding: 2% 2%;
+	padding: 2% 5.3%;
 	font-family: 'Lato', serif;
+	text-transform: uppercase;
+	font-style: italic;
+	color: darkgray;
+	font-size: 29px;
 }
 
 .gradient-style {

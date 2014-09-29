@@ -1,16 +1,3 @@
-#content {
-	padding-top: 13px;
-}
-
-h2 {
-	padding: 2% 5.3%;
-	font-family: 'Lato', serif;
-	text-transform: uppercase;
-	font-style: italic;
-	color: darkgray;
-	font-size: 29px;
-}
-
 #posts {
 	border-collapse: collapse;
 	height: 20%;

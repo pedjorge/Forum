@@ -45,6 +45,7 @@
         </div>
         <div id="container">
             <div id="content">
+                <h2>Forums</h2>
                 <?php include 'php_support/show_categories.php'; ?>
                 <div class="add">
                     <p id="onclick">Add Category</p>
