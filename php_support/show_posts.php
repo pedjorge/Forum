@@ -23,7 +23,7 @@
 	echo "<table id='posts' class='gradient-style'>
             <thead>
                 <tr>
-                    <th colspan='2' scope='col'>".$topic_name."</th>
+                    <th colspan='2' scope='col' id='topic_name'>".$topic_name."</th>
                 </tr>
             </thead>
             <tbody>

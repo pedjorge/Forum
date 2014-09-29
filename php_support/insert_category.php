@@ -3,9 +3,6 @@
 	$name = $_GET['name'];
 	$description = $_GET['description'];
 
-	echo $name;
-	echo $description;
-
 	$con = mysqli_connect('localhost','root','','forum_db');
 	if (!$con) {
 	  die('Could not connect: ' . mysqli_error($con));

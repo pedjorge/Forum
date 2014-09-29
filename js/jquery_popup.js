@@ -108,8 +108,9 @@ $(document).ready(function() {
 
 	// Contact form popup send-button click event.
 	$("#add_reply").click(function() {
-		var username = "Username";
+		var username = "ped.jorge";
 		var message = $("#message").val();
+		var topic = document.getElementById('topic_name').innerHTML;
 
 		// Date
 		var today = new Date();
@@ -130,7 +131,7 @@ $(document).ready(function() {
 			alert("Please Fill All Fields");
 		}
 		else {
-            var table = document.getElementById('topics');
+            var table = document.getElementById('posts');
             var rowCount = table.rows.length;
             var row = table.insertRow(rowCount);
 	     
@@ -141,8 +142,20 @@ $(document).ready(function() {
             cell1.innerHTML =  today + "<br>" + time;
             cell2.innerHTML = "<p class='message_author'>" + username + "</p>"
             				  + "<p>" + message + "</p>";
-            
-	        document.getElementById("contactdiv").style.display = "none";
+  
+	        if (window.XMLHttpRequest) {
+			    // code for IE7+, Firefox, Chrome, Opera, Safari
+			    xmlhttp=new XMLHttpRequest();
+			} else { // code for IE6, IE5
+			    xmlhttp=new ActiveXObject("Microsoft.XMLHTTP");
+			}
+			xmlhttp.onreadystatechange=function() {
+				if (xmlhttp.readyState==4 && xmlhttp.status==200) {
+					document.getElementById("contactdiv").style.display = "none";
+				}
+			}
+			xmlhttp.open("GET","php_support/reply.php?username="+username+"&message="+message+"&topic_name="+topic+"&date="+today,true);
+			xmlhttp.send();
 
 		}
 	});
