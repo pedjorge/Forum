@@ -51,7 +51,7 @@
 		$post_date = $row_query_2['date_created'];
 		$post_author = $row_query_2['username'];
 	 	echo "<tr>";
-	  	echo "<td class='date'>".$post_date."</td>";
+	  	echo "<td class='date'>".date('d-m-Y', strtotime($post_date))."</td>";
 	  	echo "<td class='message'>";
 	  	echo "<p class='message_author'>".$post_author."</p>";
 	  	echo "<p>".$post_message."</p>";

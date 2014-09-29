@@ -139,7 +139,7 @@ $(document).ready(function() {
             cell1.className = "date";
             var cell2 = row.insertCell(1);
             cell2.className = "message";
-            cell1.innerHTML =  today + "<br>" + time;
+            cell1.innerHTML =  today /*+ "<br>" + time*/;
             cell2.innerHTML = "<p class='message_author'>" + username + "</p>"
             				  + "<p>" + message + "</p>";
   
