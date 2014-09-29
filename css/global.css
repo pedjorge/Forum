@@ -109,6 +109,11 @@ th, td {
     text-align: left;
 }
 
+.last_topic {
+	text-align: center;
+	font-style: italic;
+}
+
 h3 {
 	margin: 0;
 }
@@ -245,6 +250,8 @@ textarea {
 a:link { color: cadetblue; }
 a:visited { color: cadetblue; }
 a:active { color: cadetblue; }
+
+.last_topic a {	color: black; }
 
 /*=========================================================================== */
 /*--------------------------------- FOOTER ---------------------------------- */

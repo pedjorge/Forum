@@ -33,7 +33,7 @@
 	    echo "<a href='categories.php?category=". $row_query_1['category_ID'] ."'><h3>". $row_query_1['category_name'] ."</h3>";
 	    echo "<p>". $row_query_1['category_description'] ."</p></a>";
 	    echo "</td>";
-	    echo "<td class='last_topic'>".$last_topic."</td>";  
+	    echo "<td class='last_topic'><a href='topic.php?topic=".$last_topic."'>".$last_topic."</a></td>";  
         echo "</tr>";
 	}
 
