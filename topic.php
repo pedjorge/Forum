@@ -12,7 +12,7 @@
         <div id="header_container">
             <div id="header">
                 <div class="logo_title">
-                    <a href="home.php"><h1><em><b>Forum</b></em></h1></a>
+                    <h1><em><b>Forum</b></em></h1>
                 </div>
 
                 <div class="search_container">

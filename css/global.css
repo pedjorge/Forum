@@ -12,48 +12,47 @@ body {
 	padding:0; 
 }
 
-@font-face{
-	font-family: 'myHeading';
-	src: url(../font/mentone-semibol.eot) format('embedded-opentype');
-	src: url(../font/mentone-semibol.otf) format('otf'),
-		 url(../font/mentone-semibol.eot?#iefix) format('embedded-opentype'),
-		 url(../font/mentone-semibol.ttf) format('truetype'),
-		 url(../font/mentone-semibol.woff) format('woff'),
-		 url(../font/mentone-semibol.svg#mentonesemibold) format('svg');
+/*=========================================================================== */
+/*---------------------------------- MENU ----------------------------------- */
+/*=========================================================================== */
+
+#menu {
+	height: 100%;
+	width: 25%;
+	float: left;
+	background-color: #FAFAFA;
+	box-shadow: 1px 1px 5px ghostwhite;
 }
 
-/*=========================================================================== */
-/*--------------------------------- HEADER ---------------------------------- */
-/*=========================================================================== */
-
-#header_container {
- 	box-shadow: 1px 1px 15px #d1d1d1;
- 	height: 10%; 
- 	left: 0; 
- 	position: fixed; 
- 	width: 100%; 
- 	top: 0; 
- 	background-color: #fff;
- }
-
 #header { 
-	height: 100%;
-	line-height:60px; 
-	margin:0 auto; 
-	width: 100%; 
-	text-align:center; 
+	height: 14%;
+	margin: 0 auto;
+	width: 100%;
+	text-align: center;
 }
 
 div.logo_title {
-	height: 75%;
-	width: 307px;
+	height: 41%;
+	width: 88%;
+	padding: 5.8% 2% 6.2% 14%;
+}
+
+.logo {
 	float: left;
-	padding: 1.8% 0% 0% 2%;
+	height: 100%;
+	width: 30%;
 }
 
 img.logo {
+	height: 45px;
 	width: 90px;
 	float:left;
+}
+
+.title {
+	height: 100%;
+	width: 70%;
+	float: left;
 }
 
 h1{
@@ -62,30 +61,74 @@ h1{
 	left: 20px;
 	bottom: -2px;
 	color:#003777;
-	font-family: 'myHeading';
+	font-family: 'Lato', serif;
 	font-size:2.6em;
 	float: left;
 	margin: 0;
 }
 
 div.search_container {
-	height: 75%;
-	float: right;
-	width: 307px;
-	padding: 1.8% 0% 0% 2%;
+	height: 19%;
+	width: 100%;
+}
+
+.menu_item {
+	height: 4.8%;
+	width: 101%;
+	background-color: white;
+	margin-top: 3px;
+	text-align: left;
+	font-family: 'Lato', serif;
+}
+
+.menu_item p {
+	padding: 4px 0 0 15px;
+	font-weight: bold;
+	font-size: 18px;
+	color: #003777;
+	height: 85.9%;
+}
+
+#navigation {
+	height: 78.5%;
+	padding-top: 9%;
+}
+
+#navigation_items {
+	height: 85%;
+	width: auto;
+	list-style-type: none;
+	padding: 0;
+}
+
+li:last-child {
+    margin-top: 181%;
+}
+
+.menu_item:hover {
+	background-color: lightgrey;
+}
+
+.menu_item:hover p {
+	color: white;
+}
+
+#footer {
+	padding: 3%;
+	font-family: 'Lato', serif;
+	color: lightgrey;
+	font-style: italic;
 }
 
 /*=========================================================================== */
 /*------------------------------ CONTAINER ---------------------------------- */
 /*=========================================================================== */
- 
-#container { 
-	margin: 0 auto -6%;
-	overflow: hidden;
-	padding: 92px 0 0;
-	width: 100%;
-	height: auto;
-	min-height: 86%;
+
+#container{
+	height: 100%;
+	width: 75%;
+	float: left;
+	overflow: auto;
 }
 
 #content {
@@ -96,8 +139,8 @@ div.search_container {
 }
 
 table {
-    width: 80%;
-	margin-left: 10%;
+    width: 90%;
+	margin-left: 5%;
 }
 
 tbody {
@@ -125,11 +168,11 @@ table p {
 
 h2 {
 	padding: 2% 2%;
-	font-family: myHeading;
+	font-family: 'Lato', serif;
 }
 
 .gradient-style {
-	font-family: myHeading;
+	font-family: 'Lato', serif;
 	font-size: 13px;
 }
 
@@ -150,10 +193,10 @@ h2 {
 }
 
 .add {
-	font-family: myHeading;
+	font-family: 'Lato', serif;
 	float: right;
-	margin-right: 9.9%;
-	margin-top: 1%;
+	margin-right: 10.2%;
+	margin-top: 2%;
 }
 
 #onclick{
@@ -173,7 +216,7 @@ h2 {
 }
 
 .form {
-	font-family: myHeading;
+	font-family: 'Lato', serif;
 	border-radius:2px;
 	padding:20px 30px;
 	box-shadow:0 0 15px;
