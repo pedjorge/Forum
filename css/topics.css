@@ -1,0 +1,67 @@
+#content {
+	padding-top: 13px;
+}
+
+h2 {
+	padding: 2% 5.3%;
+	font-family: 'Lato', serif;
+	text-transform: uppercase;
+	font-style: italic;
+	color: darkgray;
+	font-size: 29px;
+}
+
+#posts {
+	border-collapse: collapse;
+	height: 20%;
+	margin-top: 50px;
+}
+
+.date {
+	color: black;
+	text-align: center;
+	width: 12%;
+	border-right: 1px solid #eee;
+	padding: 1%;
+}
+
+#onclick {
+	width: 46px;
+}
+
+#topic_message td{
+	height: 100px;
+	text-align: justify;
+	padding: 20px;
+}
+
+.message_author {
+	color: cadetblue;
+	font-size: 17px;
+	font-weight: bold;
+	font-style: italic;
+	text-decoration: underline;
+	margin-bottom: 5px;
+}
+
+.message_date {
+	text-align: right;
+	color: black;
+}
+
+.message {
+	padding: 1%;
+	text-align: justify;
+}
+
+.add {
+	margin: 3% 0 0 0;
+}
+
+a { text-decoration: none; }
+
+th { padding: 4px; }
+
+.category {
+	text-align: center;
+}

@@ -4,7 +4,7 @@
         <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
         <link href='http://fonts.googleapis.com/css?family=Lato&subset=latin,latin-ext' rel='stylesheet' type='text/css'>
         <link rel="stylesheet" href="css/global.css">
-        <link rel="stylesheet" href="css/home.css">
+        <link rel="stylesheet" href="css/topics.css">
         <script src="js/jquery_popup.js"></script>
     </head>
     <body>
@@ -31,8 +31,8 @@
                     <li class="Forums menu_item">
                         <a href="#" class="menu_item_link"><p>Forums</p></a>
                     </li>
-                    <li class="Topics menu_item">
-                        <a href="topics.php" class="menu_item_link"><p>Topics</p></a>
+                    <li class="Topics menu_item" style="background-color: lightgrey;">
+                        <a href="#" class="menu_item_link"><p style="color:white;">Topics</p></a>
                     </li>
                     <li class="Settings menu_item">
                         <a href="#" class="menu_item_link"><p>Settings</p></a>
@@ -45,22 +45,8 @@
         </div>
         <div id="container">
             <div id="content">
-                <?php include 'php_support/show_categories.php'; ?>
-                <div class="add">
-                    <p id="onclick">Add Category</p>
-                </div>
-            </div>
-            <div id="contactdiv">
-                <form class="form" action="#" id="contact">
-                    <p id="h3"><b>Create Category<b><p>
-                    <label>Category Name: <span>*</span></label>
-                    <input type="text" id="name" placeholder="Name" name="category_name" />
-                    <label>Category Description:</label>
-                    <textarea id="description" placeholder="Description......." name="description" ></textarea>
-                    <input type="button" id="send" value="Send"/>
-                    <input type="button" id="cancel" value="Cancel"/>
-                    <br/>
-                </form>
+            <h2 id="category_name">All Topics</h2>
+            <?php include 'php_support/show_all_topics.php'; ?>
             </div>
         </div>
     </body>
