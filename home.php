@@ -25,6 +25,9 @@
             </div>
             <div id="navigation">
                 <ul id="navigation_items">
+                    <li class="Username">
+                        <p>Welcome Pedro Jorge</p>
+                    </li>
                     <li class="Forums menu_item" style="background-color: lightgrey;">
                         <img id="menu_image" src="img/home.jpg">
                         <a href="#" class="menu_item_link"><p style="color:white;">Forums</p></a>
@@ -36,8 +39,11 @@
                     <li class="Topics menu_item">
                         <a href="topics.php" class="menu_item_link"><p>Topics</p></a>
                     </li>
-                    <li class="Settings menu_item">
+                    <li class="Settings menu_item" style="margin-top:532px;">
                         <a href="#" class="menu_item_link"><p>Settings</p></a>
+                    </li>
+                    <li class="Logout">
+                        <a href="#" class="menu_item_link"><p>Logout</p></a>
                     </li>
                 </ul>
             </div>

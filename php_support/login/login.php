@@ -34,6 +34,8 @@ if (!isset($_POST['submit'])){
         echo "<p>Invalid username/password combination</p>";
     } else {
         echo "<p>Logged in successfully</p>";
+        sleep(5);
+        header('Location: ../../home.php');
         // do stuffs
     }
 }

@@ -103,9 +103,30 @@ div.search_container {
 	padding: 0;
 }
 
-li:last-child {
-    margin-top: 181%;
+.Username {
+	font-family: 'Lato', serif;
+	text-align: center;
+	font-weight: bold;
+	font-size: 17px;
+	color: green;
+	height: 24px;
 }
+
+.Logout {
+	background-color: white;
+	font-family: 'Lato', serif;
+	font-weight: bold;
+	font-size: 18px;
+	height: 24px;
+	padding: 0.8% 0 0.8% 15px;
+}
+
+.Logout p {
+	color: red;
+}
+
+.Logout:hover {	background-color: red; }
+.Logout:hover p { color: white; }
 
 .menu_item:hover {
 	background-color: lightgrey;
