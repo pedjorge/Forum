@@ -1,0 +1,48 @@
+div.logo_title {
+	height: 45px;
+	width: 250px;
+}
+
+.logo {
+	float: left;
+	height: 100%;
+	width: 90px;
+	margin-right: 10px;
+}
+
+img.logo {
+	height: 45px;
+	width: 90px;
+	float:left;
+}
+
+.title {
+	height: 100%;
+	width: 140px;
+	float: left;
+}
+
+h1{
+	left: 20px;
+	bottom: -2px;
+	color:#003777;
+	font-family: 'Lato', serif;
+	font-size:2.6em;
+	margin: 0;
+}
+
+#container {
+	margin: 10% auto;
+	width: 30%;
+	min-width: 350px;
+	text-align: center;
+	box-shadow: 1px 1px 15px #d1d1d1;
+	padding: 10px;
+	border-radius: 20px;
+}
+
+#container h1 {
+	text-align: center;
+	width: 100%;
+	font-size: 30px;
+}
