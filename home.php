@@ -30,18 +30,19 @@
             <div id="navigation">
                 <ul id="navigation_items">
                     <li class="Username">
-                        <p>Welcome <?php echo "Username = " . $_SESSION["username"]; ?></p>
+                        Welcome <span id="user_name"><?php echo $_SESSION["username"]; ?></span>
                     </li>
                     <li class="Forums menu_item" style="background-color: lightgrey;">
                         <img id="menu_image" src="img/home.jpg">
                         <a href="#" class="menu_item_link"><p style="color:white;">Forums</p></a>
                     </li>
+                    <li class="Topics menu_item">
+                        <img id="menu_image" src="img/topics.png">
+                        <a href="topics.php" class="menu_item_link"><p>Topics</p></a>
+                    </li>
                     <li class="Starred_topics menu_item">
                         <img id="menu_image" src="img/starred.png">
                         <a href="#" class="menu_item_link"><p>Starred topics</p></a>
-                    </li>
-                    <li class="Topics menu_item">
-                        <a href="topics.php" class="menu_item_link"><p>Topics</p></a>
                     </li>
                     <li class="Settings menu_item" style="margin-top:532px;">
                         <a href="#" class="menu_item_link"><p>Settings</p></a>
