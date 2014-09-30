@@ -30,7 +30,7 @@
             <div id="navigation">
                 <ul id="navigation_items">
                     <li class="Username">
-                        <p>Welcome <?php echo "Username = " . $_SESSION["username"]; ?></p>
+                        Welcome <span id="user_name"><?php echo $_SESSION["username"]; ?></span> 
                     </li>
                     <li class="Forums menu_item">
                         <img id="menu_image" src="img/home.jpg">
@@ -47,7 +47,7 @@
                         <a href="#" class="menu_item_link"><p>Settings</p></a>
                     </li>
                     <li class="Logout">
-                        <a href="#" class="menu_item_link"><p>Logout</p></a>
+                        <a href="php_support/logout.php" class="menu_item_link"><p>Logout</p></a>
                     </li>
                 </ul>
             </div>

@@ -47,7 +47,7 @@
                         <a href="#" class="menu_item_link"><p>Settings</p></a>
                     </li>
                     <li class="Logout">
-                        <a href="#" class="menu_item_link"><p>Logout</p></a>
+                        <a href="php_support/logout.php" class="menu_item_link"><p>Logout</p></a>
                     </li>
                 </ul>
             </div>

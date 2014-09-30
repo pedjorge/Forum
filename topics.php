@@ -34,7 +34,7 @@
                     </li>
                     <li class="Forums menu_item">
                         <img id="menu_image" src="img/home.jpg">
-                        <a href="#" class="menu_item_link"><p>Forums</p></a>
+                        <a href="home.php" class="menu_item_link"><p>Forums</p></a>
                     </li>
                     <li class="Starred_topics menu_item">
                         <img id="menu_image" src="img/starred.png">
@@ -47,7 +47,7 @@
                         <a href="#" class="menu_item_link"><p>Settings</p></a>
                     </li>
                     <li class="Logout">
-                        <a href="#" class="menu_item_link"><p>Logout</p></a>
+                        <a href="php_support/logout.php" class="menu_item_link"><p>Logout</p></a>
                     </li>
                 </ul>
             </div>

@@ -108,7 +108,7 @@ $(document).ready(function() {
 
 	// Contact form popup send-button click event.
 	$("#add_reply").click(function() {
-		var username = "ped.jorge";
+		var username = document.getElementById('user_name').innerHTML;
 		var message = $("#message").val();
 		var topic = document.getElementById('topic_name').innerHTML;
 
@@ -154,7 +154,7 @@ $(document).ready(function() {
 					document.getElementById("contactdiv").style.display = "none";
 				}
 			}
-			xmlhttp.open("GET","php_support/reply.php?username="+username+"&message="+message+"&topic_name="+topic+"&date="+today,true);
+			xmlhttp.open("GET","php_support/reply.php?message="+message+"&topic_name="+topic+"&date="+today,true);
 			xmlhttp.send();
 
 		}

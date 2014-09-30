@@ -1,6 +1,9 @@
 <?php
+	// continue the session
+    session_start();
+    
 	/* INSERT INTO DB */
-	$user_name = $_GET['username'];
+	$user_name = $_SESSION["username"];
 	$message = $_GET['message'];
 	$date = $_GET['date'];
 	$topic_name = $_GET['topic_name'];
