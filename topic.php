@@ -1,4 +1,8 @@
 <!DOCTYPE html>
+<?php
+    // continue the session
+    session_start();
+?>
 <html>
     <head>
         <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
@@ -25,6 +29,9 @@
             </div>
             <div id="navigation">
                 <ul id="navigation_items">
+                    <li class="Username">
+                        <p>Welcome <?php echo "Username = " . $_SESSION["username"]; ?></p>
+                    </li>
                     <li class="Forums menu_item">
                         <img id="menu_image" src="img/home.jpg">
                         <a href="home.php" class="menu_item_link"><p>Forums</p></a>
@@ -36,8 +43,11 @@
                     <li class="Topics menu_item">
                         <a href="topics.php" class="menu_item_link"><p>Topics</p></a>
                     </li>
-                    <li class="Settings menu_item">
+                    <li class="Settings menu_item" style="margin-top:532px;">
                         <a href="#" class="menu_item_link"><p>Settings</p></a>
+                    </li>
+                    <li class="Logout">
+                        <a href="#" class="menu_item_link"><p>Logout</p></a>
                     </li>
                 </ul>
             </div>

@@ -28,6 +28,7 @@
                 <p>Last name: <input type="text" name="last_name" /></p>
                 <p>Email: <input type="type" name="email" /></p>
                 <input type="submit" name="submit" value="Register" />
+                <a href='login.php'>Go back to Login</a>
             </form>
             <?php
                 } else {

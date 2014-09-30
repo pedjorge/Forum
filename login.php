@@ -30,7 +30,7 @@
             
             <?php
                 } else {
-                    require_once("db_const.php");
+                    require_once("php_support/db_const.php");
                     $mysqli = new mysqli(DB_HOST, DB_USER, DB_PASS, DB_NAME);
                     # check connection
                     if ($mysqli->connect_errno) {
@@ -47,8 +47,10 @@
                         echo "<p>Invalid username/password combination</p>";
                     } else {
                         echo "<p>Logged in successfully</p>";
+                        session_start();
+                        $_SESSION["username"] = $username;
                         sleep(5);
-                        header('Location: ../../home.php');
+                        header('Location: home.php');
                         // do stuffs
                     }
                 }
