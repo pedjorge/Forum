@@ -19,6 +19,7 @@ body {
 #menu {
 	height: 100%;
 	width: 25%;
+	min-width: 239px;
 	float: left;
 	background-color: #FAFAFA;
 	box-shadow: 1px 1px 5px ghostwhite;
@@ -74,6 +75,7 @@ div.search_container {
 
 .menu_item {
 	height: 4.8%;
+	min-height: 30px;
 	width: 101%;
 	background-color: white;
 	margin-top: 3px;
