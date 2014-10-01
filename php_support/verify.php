@@ -19,8 +19,9 @@
     	if($row <= 0){ // If no users exist with posted credentials print 0 like below.
     		echo "incorrect";
     	} else {
-    		$_SESSION['userid'] 	= $row['user_ID'];
+    		$_SESSION['user_ID'] 	= $row['user_ID'];
     		$_SESSION['username'] 	= $row['username'];
+            $_SESSION['fname']   = $row['first_name'];
     		echo "login";
     	}
     }
