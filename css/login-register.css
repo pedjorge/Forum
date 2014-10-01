@@ -32,6 +32,7 @@ h1{
 }
 
 #container {
+	font-family: 'Lato', serif;
 	margin: 10% auto;
 	width: 30%;
 	min-width: 350px;
@@ -45,4 +46,54 @@ h1{
 	text-align: center;
 	width: 100%;
 	font-size: 30px;
+}
+
+
+
+/*=========================================================================== */
+/*--------------------------------- LOGIN ----------------------------------- */
+/*=========================================================================== */
+
+#login_result {
+	margin: 6px 0 3px 0;
+	display:block;
+	width:100%;
+	text-align:center;
+	height:25px;
+}
+
+table {	margin: 0 auto; }
+.success { color:#009900; }
+.error {	color:#F33C21; }
+
+.credentials {
+	border:0;
+	outline:0;
+	margin:0;
+	padding:0;
+	padding:5px;
+	width:180px;
+	border:#0081b5 solid 1px;
+}
+.credentials:hover { border:#321363 solid 1px; }
+.credentials.error { border:#ed1846 solid 1px; }
+
+.as_button{
+	float: right;
+	background:#ed1846;
+	border:none;
+	outline:none;
+	margin:10px 0 0 0;
+	padding:0;
+	color:#FFF;
+	padding:5px 10px;
+	font-weight:300;
+	cursor:pointer;
+}
+.as_button:hover { background:#fe0238; }
+.as_button:active {	background:#a1147d; }
+
+#register {
+	float: right;
+	font-size: 12px;
 }
