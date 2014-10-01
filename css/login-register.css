@@ -54,7 +54,7 @@ h1{
 /*--------------------------------- LOGIN ----------------------------------- */
 /*=========================================================================== */
 
-#login_result {
+#login_result, #register_result {
 	margin: 6px 0 3px 0;
 	display:block;
 	width:100%;
@@ -93,7 +93,7 @@ table {	margin: 0 auto; }
 .as_button:hover { background:#fe0238; }
 .as_button:active {	background:#a1147d; }
 
-#register {
+#register, #login {
 	float: right;
 	font-size: 12px;
 }

@@ -5,7 +5,7 @@
 ?>
 <html>
     <head>
-        <title>User Login Form</title>
+        <title>Login</title>
         <link rel="stylesheet" href="css/login-register.css">
         <link href='http://fonts.googleapis.com/css?family=Lato&subset=latin,latin-ext' rel='stylesheet' type='text/css'>
         <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>

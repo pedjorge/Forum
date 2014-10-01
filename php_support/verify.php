@@ -7,7 +7,7 @@
     }
     mysqli_select_db($con,"forum_db");
 
-    if(isset($_POST['username']) && $_POST['password']){ // Check the action `login`
+    if(isset($_POST['username']) && $_POST['password']){ 
     	$username 		= $_POST['username']; // Get the username 
     	$password 		= $_POST['password']; // Get the password and decrypt it
     	$sql			= "SELECT * FROM users 
