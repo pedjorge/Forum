@@ -12,9 +12,7 @@
 	padding: 1%;
 }
 
-#onclick {
-	width: 46px;
-}
+#onclick { width: 46px; }
 
 #topic_message td{
 	height: 100px;
@@ -41,14 +39,12 @@
 	text-align: justify;
 }
 
-.add {
-	margin: 3% 0 0 0;
-}
+.add { margin: 3% 0 0 0; }
 
 a { text-decoration: none; }
 
 th { padding: 4px; }
 
-.category {
-	text-align: center;
-}
+.category {	text-align: center; }
+
+.created_at { width: 20%; }

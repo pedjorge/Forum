@@ -13,7 +13,7 @@
                 <tr>
                     <th scope='col'>Topic</th>
                     <th scope='col'>Category</th>
-                    <th scope='col'>Created at</th>
+                    <th scope='col' class='created_at'>Created at</th>
                 </tr>
             </thead>
             <tbody>";
@@ -33,7 +33,7 @@
 	 	echo "<a href='topic.php?topic=". $row_query_1['topic_name'] ."'><h3>". $row_query_1['topic_name'] ."</h3></a>";
 	  	echo "</td>";
 	  	echo "<td class='category'>".$category_name."</td>";
-	  	echo "<td class='date'>". date('d-m-Y', strtotime($row_query_1['date'])) ."</td>";  
+	  	echo "<td class='date'>".date('d F Y', strtotime($row_query_1['date']))."</td>";  
       	echo "</tr>";
 	}
 
