@@ -6,10 +6,16 @@
 <html>
     <head>
         <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+        <script type="text/javascript" src="js/jquery.timeago.js"></script>
         <link href='http://fonts.googleapis.com/css?family=Lato&subset=latin,latin-ext' rel='stylesheet' type='text/css'>
         <link rel="stylesheet" href="css/global.css">
         <link rel="stylesheet" href="css/topic.css">
         <script src="js/jquery_popup.js"></script>
+        <script type="text/javascript">
+            $(document).ready(function() {
+                $('.time').timeago();
+            });
+        </script>
     </head>
     <body>
         <div id="menu">

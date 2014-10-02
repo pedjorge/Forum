@@ -8,14 +8,15 @@
 	}
 
 	mysqli_select_db($con,"forum_db");
-	$sql_query_1 = "SELECT topics.topic_ID, topics.message, topics.date, users.username 
+	$sql_query_1 = "SELECT topics.topic_ID, topics.message, topics.date, users.first_name, users.last_name 
 					FROM topics 
 					INNER JOIN users
 					ON topics.user_ID=users.user_ID
 					WHERE topic_name = '".$topic_name."'";
 	$result_query_1 = mysqli_query($con,$sql_query_1);
 	$row_query_1 = mysqli_fetch_array($result_query_1);
-	$topic_message_user = $row_query_1['username'];
+	$author_fname = $row_query_1['first_name'];
+	$author_lname = $row_query_1['last_name'];
 	$topic_message = $row_query_1['message'];
 	$topic_date = $row_query_1['date'];
 	$topic_ID = $row_query_1['topic_ID'];
@@ -29,17 +30,17 @@
             <tbody>
             <tr id='topic_message'>
                 <td colspan='3' class='message'>
-                    <p class='message_author'>".$topic_message_user."</p>
-                    <p>".$topic_message."</p>
+                    <p class='message_author'>".$author_fname." ".$author_lname."</p>
+                    <p class='main_message'>".$topic_message."</p>
                     <br />
-                    <p class='message_date'>".date('d-m-Y', strtotime($topic_date))."</p>
+                    <p class='message_date date'>".date('d F Y H:i', strtotime($topic_date))."</p>
                     <div class='add'>
                         <p id='onclick'>Reply</p>
                     </div>
                 </td>  
             </tr>";
 
-	$sql_query_2 = "SELECT posts.post_ID, posts.message, posts.date_created, users.username
+	$sql_query_2 = "SELECT posts.post_ID, posts.message, posts.date_created, users.first_name, users.last_name
 					FROM posts 
 					INNER JOIN users
 					ON posts.user_ID=users.user_ID
@@ -49,12 +50,19 @@
 	while($row_query_2 = mysqli_fetch_array($result_query_2)) {
 	  	$post_message = $row_query_2['message'];
 		$post_date = $row_query_2['date_created'];
-		$post_author = $row_query_2['username'];
+		$author_fname = $row_query_2['first_name'];
+		$author_lname = $row_query_2['last_name'];
+
+		$time = date('d-m-Y H:i', strtotime($post_date));
+	 	
 	 	echo "<tr>";
-	  	echo "<td class='date'>".date('d-m-Y', strtotime($post_date))."</td>";
-	  	echo "<td class='message'>";
-	  	echo "<p class='message_author'>".$post_author."</p>";
-	  	echo "<p>".$post_message."</p>";
+	  	echo "<td colspan='3' class='post'>";
+	  	echo "<div class='author_date'>";
+	  	echo "<p class='post_author'>".$author_fname." ".$author_lname."</p>";
+	  	echo "<p class='date'>posted <abbr class='time' title='<?php echo ".date('c', strtotime($time)).";?>'></abbr></p>";
+	  	echo "</div>";
+	  	echo "<p class='post_message'>".$post_message."</p>";
+	  	echo "<p class='date full_date'>".date('d F Y H:i', strtotime($post_date))."</p>";
 	  	echo "</td>";  
       	echo "</tr>";
 	}

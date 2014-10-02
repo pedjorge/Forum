@@ -108,7 +108,7 @@ $(document).ready(function() {
 
 	// Contact form popup send-button click event.
 	$("#add_reply").click(function() {
-		var username = document.getElementById('user_name').innerHTML;
+		var name = document.getElementById('user_name').innerHTML;
 		var message = $("#message").val();
 		var topic = document.getElementById('topic_name').innerHTML;
 
@@ -125,7 +125,7 @@ $(document).ready(function() {
 	    if(mm<10){
 	        mm='0'+mm
 	    } 
-	    var today = dd+'-'+mm+'-'+yyyy;
+	    var today = dd+'-'+mm+'-'+yyyy + ' ' + time + ':00';
 
 		if (message == ""){
 			alert("Please Fill All Fields");
@@ -134,14 +134,15 @@ $(document).ready(function() {
             var table = document.getElementById('posts');
             var rowCount = table.rows.length;
             var row = table.insertRow(rowCount);
-	     
+
             var cell1 = row.insertCell(0);
-            cell1.className = "date";
-            var cell2 = row.insertCell(1);
-            cell2.className = "message";
-            cell1.innerHTML =  today /*+ "<br>" + time*/;
-            cell2.innerHTML = "<p class='message_author'>" + username + "</p>"
-            				  + "<p>" + message + "</p>";
+            cell1.className = "post";
+            cell1.colSpan = "3";
+            cell1.innerHTML = "<div class='author_date'>"
+            				  + "<p class='post_author'>" + name + "</p>"
+            				  + "<p class='date'>posted <span class='time'>Just now</span></p></div>" 
+            				  + "<p class='post_message'>" + message + "</p>"
+            				  + "<p class='date'>" + today + "</p>";
   
 	        if (window.XMLHttpRequest) {
 			    // code for IE7+, Firefox, Chrome, Opera, Safari

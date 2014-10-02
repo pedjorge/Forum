@@ -27,7 +27,7 @@
 
 	mysqli_select_db($con,"forum_db");
 	$sql_query_3="INSERT INTO posts (topic_ID, user_ID, message, date_created) 
-		  VALUES ('".$topic_ID."', '".$user_ID."','".$message."', '".date('Y-m-d', strtotime($date))."')";
+		  VALUES ('".$topic_ID."', '".$user_ID."','".$message."', '".date('Y-m-d H:i:s', strtotime($date))."')";
 	mysqli_query($con,$sql_query_3);
 	mysqli_close($con);
 ?>

@@ -9,3 +9,9 @@
 a { text-decoration: none; }
 .category:hover { background-color: ghostwhite; }
 .category h3 { text-decoration: underline; }
+
+.last_topic p {
+	height: 34px;
+	line-height: 33px;
+}
+.last_topic:hover { background-color: ghostwhite; }
