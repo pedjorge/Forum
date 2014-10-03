@@ -25,7 +25,7 @@
 	  echo "<td class='topic'>";
 	  echo "<a href='topic.php?topic=". $row['topic_name'] ."'><h3>". $row['topic_name'] ."</h3></a>";
 	  echo "</td>";
-	  echo "<td class='date'>".date('d F Y', strtotime($row['date']))."</td>";  
+	  echo "<td class='date'>".date('d F Y', strtotime($row['date_created']))."</td>";  
       echo "</tr>";
 	}
 

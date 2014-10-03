@@ -10,6 +10,7 @@
         <link rel="stylesheet" href="css/global.css">
         <link rel="stylesheet" href="css/topics.css">
         <script src="js/jquery_popup.js"></script>
+        <script src="js/make_row_link.js"></script>
     </head>
     <body>
         <div id="menu">
@@ -58,7 +59,7 @@
         </div>
         <div id="container">
             <div id="content">
-            <h2>All Topics</h2>
+            <h2>Starred Topics</h2>
             <?php include 'php_support/show_starred_topics.php'; ?>
             </div>
         </div>

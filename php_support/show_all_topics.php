@@ -33,7 +33,7 @@
 	 	echo "<a href='topic.php?topic=". $row_query_1['topic_name'] ."'><h3>". $row_query_1['topic_name'] ."</h3></a>";
 	  	echo "</td>";
 	  	echo "<td class='category'>".$category_name."</td>";
-	  	echo "<td class='date'>".date('d F Y', strtotime($row_query_1['date']))."</td>";  
+	  	echo "<td class='date'>".date('d F Y', strtotime($row_query_1['date_created']))."</td>";  
       	echo "</tr>";
 	}
 

@@ -48,3 +48,11 @@ th { padding: 4px; }
 .category {	text-align: center; }
 
 .created_at { width: 20%; }
+
+#topics tr:hover {
+    background-color: ghostwhite;
+}
+
+#topics td:hover {
+    cursor: pointer;
+}

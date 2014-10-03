@@ -25,8 +25,8 @@
     $user_ID = $row_query_2['user_ID'];
     
 
-	$sql="INSERT INTO topics (user_ID, topic_name, message, date, category_ID) 
-		  VALUES ('".$user_ID."', '".$name."', '".$message."', '".date('Y-m-d', strtotime($date))."', '".$category_ID."')";
+	$sql="INSERT INTO topics (user_ID, topic_name, message, date_created, category_ID) 
+		  VALUES ('".$user_ID."', '".$name."', '".$message."', '".date('Y-m-d H:i:s', strtotime($date))."', '".$category_ID."')";
 	mysqli_query($con,$sql);
 	mysqli_close($con);
 ?>

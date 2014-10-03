@@ -8,7 +8,7 @@
 	}
 
 	mysqli_select_db($con,"forum_db");
-	$sql_query_1 = "SELECT topics.topic_ID, topics.message, topics.date, users.first_name, users.last_name 
+	$sql_query_1 = "SELECT topics.topic_ID, topics.message, topics.date_created, users.first_name, users.last_name 
 					FROM topics 
 					INNER JOIN users
 					ON topics.user_ID=users.user_ID
@@ -18,7 +18,7 @@
 	$author_fname = $row_query_1['first_name'];
 	$author_lname = $row_query_1['last_name'];
 	$topic_message = $row_query_1['message'];
-	$topic_date = $row_query_1['date'];
+	$topic_date = $row_query_1['date_created'];
 	$topic_ID = $row_query_1['topic_ID'];
 
 	echo "<table id='posts' class='gradient-style'>

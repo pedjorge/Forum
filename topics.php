@@ -5,11 +5,12 @@
 ?>
 <html>
     <head>
-        <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+        <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
         <link href='http://fonts.googleapis.com/css?family=Lato&subset=latin,latin-ext' rel='stylesheet' type='text/css'>
         <link rel="stylesheet" href="css/global.css">
         <link rel="stylesheet" href="css/topics.css">
         <script src="js/jquery_popup.js"></script>
+        <script src="js/make_row_link.js"></script>
     </head>
     <body>
         <div id="menu">

@@ -60,19 +60,20 @@ $(document).ready(function() {
 		var message = $("#message").val();
 		var category = document.getElementById('category_name').innerHTML;
 
-		// Date
+		/*------------------------- Date -----------------------*/
+
 		var today = new Date();
+		var time = today.getHours() + ":" + today.getMinutes();
 	    var dd = today.getDate();
 	    var mm = today.getMonth()+1; //January is 0!
+	    var monthNames = [ "January", "February", "March", "April", "May", "June",
+    					   "July", "August", "September", "October", "November", "December" ];
 
 	    var yyyy = today.getFullYear();
-	    if(dd<10){
-	        dd='0'+dd
-	    } 
-	    if(mm<10){
-	        mm='0'+mm
-	    } 
-	    var today = dd+'-'+mm+'-'+yyyy;
+	    if(dd<10) { dd='0'+dd } 
+	    var today = dd+'-'+mm+'-'+yyyy + ' ' + time + ':00';
+
+		/*------------------------- Date -----------------------*/
 
 		if (name == "" || message == ""){
 			alert("Please Fill All Fields");
@@ -87,7 +88,7 @@ $(document).ready(function() {
             var cell2 = row.insertCell(1);
             cell2.className = "date";
             cell1.innerHTML = "<a href='topic.php?topic=" + name + "'><h3>" + name + "</h3></a>";
-            cell2.innerHTML = today;
+            cell2.innerHTML = dd + " " + monthNames[mm-1] + " " + yyyy;
 
 	        if (window.XMLHttpRequest) {
 			    // code for IE7+, Firefox, Chrome, Opera, Safari

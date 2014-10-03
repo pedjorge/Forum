@@ -1,20 +1,63 @@
-<?php
- 
-## 3 Different timestamps for using with the timeago plugin
-$time = date('2014-09-29 16:31:00');
-$time_2 = time() - 39983729;
-$time_3 = date('1987-07-28 16:31:00')
- 
-?>
-<link href="css/style.css" media="screen" rel="stylesheet" type="text/css" />
-<script src="//code.jquery.com/jquery-1.11.0.min.js"></script>
-<script type="text/javascript" src="js/jquery.timeago.js"></script>
-<script type="text/javascript">
-    $(document).ready(function() {
-        $('.time').timeago();
+<head>
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+	<style type="text/css">
+table#example {
+    border-collapse: collapse;   
+}
+#example tr {
+    background-color: #eee;
+    border-top: 1px solid #fff;
+}
+#example tr:hover {
+    background-color: #ccc;
+}
+#example th {
+    background-color: #fff;
+}
+#example th, #example td {
+    padding: 3px 5px;
+}
+#example td:hover {
+    cursor: pointer;
+}
+	</style>
+	<script type="text/javascript">
+$(document).ready(function() {
+
+    $('#example tr').click(function() {
+        var href = $(this).find("a").attr("href");
+        if(href) {
+            window.location = href;
+        }
     });
-</script>
- 
-<p>This sentence was posted <abbr class="time strong" title="<?php echo date('c', strtotime($time)); ?>"></abbr></p>
-<p>Another sweet example. <abbr class="time strong" title="<?php echo date('c', $time_2); ?>"></abbr></p>
-<p>I was born <abbr class="time strong" title="<?php echo date('c', strtotime($time_3)); ?>"></abbr></p>
+
+});
+	</script>
+</head>
+
+<table id="example">
+<tr>
+    <th>&nbsp;</th>
+    <th>Name</th>
+    <th>Description</th>
+    <th>Price</th>
+</tr>
+<tr>
+    <td><a href="topic.php?topic=Housing Project in Oxford"><h3>Housing Project in Oxford</h3></a></td>
+    <td>Apples</td>
+    <td>Blah blah blah blah</td>
+    <td>10.23</td>
+</tr>
+<tr>
+    <td><a href="bananas">Edit</a></td>
+    <td>Bananas</td>
+    <td>Blah blah blah blah</td>
+    <td>11.45</td>
+</tr>
+<tr>
+    <td><a href="oranges">Edit</a></td>
+    <td>Oranges</td>
+    <td>Blah blah blah blah</td>
+    <td>12.56</td>
+</tr>
+</table>
