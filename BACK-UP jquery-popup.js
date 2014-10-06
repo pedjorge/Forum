@@ -13,17 +13,9 @@ $(document).ready(function() {
 		$("#contactdiv").css("display", "block");
 	});
 
-	$(".reply_to_post").click(function() {
-		$("#replydiv").css("display", "block");
-	});
-
 	$("#contact #cancel").click(function() {
 		$("#contactdiv").css("display", "none");
 	});
-
-	$("#reply_form #cancel_reply_to_post").click(function() {
-        $("#replydiv").css("display", "none");
-    });
 
 	// Contact form popup send-button click event.
 	$("#send").click(function() {
@@ -152,7 +144,7 @@ $(document).ready(function() {
             				  + "<p class='date'>posted <span class='time'>Just now</span></p></div>" 
             				  + "<p class='post_message'>" + message + "</p>"
             				  + "<p class='date'>" + today + "</p>";
- 
+  
 	        if (window.XMLHttpRequest) {
 			    // code for IE7+, Firefox, Chrome, Opera, Safari
 			    xmlhttp=new XMLHttpRequest();
@@ -166,65 +158,7 @@ $(document).ready(function() {
 			}
 			xmlhttp.open("GET","php_support/reply.php?message="+message+"&topic_name="+topic+"&date="+today,true);
 			xmlhttp.send();
-			location.reload();
+
 		}
 	});
-
-	var post_ID;
-    $('.reply_to_post').click(function() {
-        post_ID = $(this).closest('tr').attr('id'); // table row ID 
-        $("#replydiv").css("display", "block");
-    });
-
-    $("#add_reply_to_post").click(function() {
-        var message = $("#reply_message").val();
-        var name = document.getElementById('user_name').innerHTML;
-
-        /*------------------------- Date -----------------------*/
-        var today = new Date();
-        var time = today.getHours() + ":" + today.getMinutes();
-        var dd = today.getDate();
-        var mm = today.getMonth()+1; //January is 0!
-        var monthNames = [ "January", "February", "March", "April", "May", "June",
-                           "July", "August", "September", "October", "November", "December" ];
-        var yyyy = today.getFullYear();
-        if(dd<10) { dd='0'+dd } 
-        var today = dd+'-'+mm+'-'+yyyy + ' ' + time + ':00';
-        /*------------------------- Date -----------------------*/
-
-        if (message == ""){
-            alert("Please Fill All Fields");
-        }
-        else {
-/*            var table = document.getElementById('posts');
-            var rowCount = table.rows.length;
-            var row = table.insertRow(rowCount);
-            var cell1 = row.insertCell(0);
-                cell1.colSpan = "3";
-                cell1.className = "post reply";
-                cell1.innerHTML = "<div class='author_date'>"
-                                  + "<p class='post_author'>" + name + "</p>"
-                                  + "<p class='date'>posted <span class='time'>Just now</span></p></div>"
-                                  + "<p class='post_message'>" + message + "</p>"
-                                  + "<div class='post_footer'>"
-                                  + "<p class='reply_to_post'>Reply</p>" 
-                                  + "<p class='date full_date'>" + today + "</p></div>";
-*/
-            if (window.XMLHttpRequest) {
-                // code for IE7+, Firefox, Chrome, Opera, Safari
-                xmlhttp=new XMLHttpRequest();
-            } else { // code for IE6, IE5
-                xmlhttp=new ActiveXObject("Microsoft.XMLHTTP");
-            }
-            
-            xmlhttp.onreadystatechange=function() {
-                if (xmlhttp.readyState==4 && xmlhttp.status==200) {
-                    document.getElementById("#replydiv").style.display = "none";
-                }
-            }
-            xmlhttp.open("GET","php_support/reply_to_post.php?message="+message+"&post_ID="+post_ID+"&date="+today,true);
-            xmlhttp.send();
-			location.reload();
-        }
-    });
 });

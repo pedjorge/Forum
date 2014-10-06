@@ -75,3 +75,40 @@ a { text-decoration: none; }
 	padding-left: 10px;
 	margin-bottom: -8px;
 }
+
+.post_footer {
+	float: left;
+	width: 100%;
+}
+
+.reply_to_post {
+	color: #003777;
+	background-color: white;
+	border: 1px solid white;
+	float: left;
+	width: 43px;
+	font-weight: bold;
+	cursor: pointer;
+	padding: 0px;
+	border-radius: 3px;
+	margin: 3px 0 10px 10px;
+	font-size: 15px;
+}
+
+.reply_to_post:hover { color: #d1d1d1; }
+
+.reply {
+	padding-left: 65px;
+}
+
+#replydiv { 
+	opacity:0.92;
+	position: absolute;
+	top: 0px;
+	left: 0px;
+	height: 100%;
+	width: 100%;
+	background: #000;
+	display: none;
+	z-index: 10;
+}

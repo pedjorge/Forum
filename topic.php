@@ -76,6 +76,16 @@
                     <br/>
                 </form>
             </div>
+            <div id="replydiv">
+                <form class="form" action="#" id="reply_form">
+                    <p id="h3"><b>Reply<b><p>
+                    <label>Message:</label>
+                    <textarea id="reply_message" placeholder="Message......."></textarea>
+                    <input type="button" id="add_reply_to_post" value="Reply"/>
+                    <input type="button" id="cancel_reply_to_post" value="Cancel"/>
+                    <br/>
+                </form>
+            </div>
         </div>
     </body>
 </html>
