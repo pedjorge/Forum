@@ -1,18 +1,18 @@
 <?php
-	/* Show topics a user replied on starred_topics.php */
+	/* Show topics a user posted on starred_topics.php */
 
 	require 'db_connect.php';
 	
 	$sql_query_1 = "SELECT DISTINCT 
 						topics.topic_name, 
-						replies.topic_ID, 
+						posts.topic_ID, 
 						topics.date_created
 					FROM 
-						replies
+						posts
 					INNER JOIN topics
-					ON replies.topic_ID = topics.topic_ID
+					ON posts.topic_ID = topics.topic_ID
 					WHERE 
-						replies.user_ID = '".$_SESSION['user_ID']."'
+						posts.user_ID = '".$_SESSION['user_ID']."'
 					ORDER BY topics.date_created DESC";
 
 	$result_query_1 = mysqli_query($con,$sql_query_1);

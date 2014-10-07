@@ -1,10 +1,6 @@
 <?php
-    require_once("db_const.php");
-    $con = mysqli_connect(DB_HOST, DB_USER, DB_PASS, DB_NAME);
-    if (!$con) {
-      die('Could not connect: ' . mysqli_error($con));
-    }
-    mysqli_select_db($con,"forum_db");
+
+    require 'db_connect.php';
 
     if(isset($_POST['username'])) {
         $username    = $_POST['username'];
@@ -15,13 +11,28 @@
                  
         # check if username and email exist else insert
         $exists = 0;
-        $result = mysqli_query($con, "SELECT username from users WHERE username = '".$username."' LIMIT 1");
+        $result = mysqli_query($con, "SELECT 
+                                        username 
+                                      FROM 
+                                        users 
+                                      WHERE 
+                                        username = '".$username."' LIMIT 1");
         if ($result->num_rows == 1) {
             $exists = 1;
-            $result = mysqli_query($con, "SELECT email from users WHERE email = '".$email."' LIMIT 1");
+            $result = mysqli_query($con, "SELECT 
+                                            email 
+                                          FROM 
+                                            users 
+                                          WHERE 
+                                            email = '".$email."' LIMIT 1");
             if ($result->num_rows == 1) $exists = 2;    
         } else {
-            $result = mysqli_query($con, "SELECT email from users WHERE email = '".$email."' LIMIT 1");
+            $result = mysqli_query($con, "SELECT 
+                                            email 
+                                          FROM
+                                            users 
+                                          WHERE 
+                                            email = '".$email."' LIMIT 1");
             if ($result->num_rows == 1) $exists = 3;
         }
                  

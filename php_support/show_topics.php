@@ -1,14 +1,16 @@
 <?php
-	/* SELECT FROM DB */
+	/* Show topics belonging to a category on categories.php */
+
+	require 'db_connect.php';
+
 	$category_ID = $_GET['category'];
-
-	$con = mysqli_connect('localhost','root','','forum_db');
-	if (!$con) {
-	  die('Could not connect: ' . mysqli_error($con));
-	}
-
-	mysqli_select_db($con,"forum_db");
-	$sql = "SELECT * FROM topics WHERE category_ID = '".$category_ID."'";
+	$sql = "SELECT 
+				topic_name, 
+				date_created 
+			FROM 
+				topics 
+			WHERE 
+				category_ID = '".$category_ID."'";
 	$result = mysqli_query($con,$sql);
 
 	echo "<table id='topics' class='gradient-style'>
@@ -21,12 +23,16 @@
             <tbody>";
 
 	while($row = mysqli_fetch_array($result)) {
-	  echo "<tr>";
-	  echo "<td class='topic'>";
-	  echo "<a href='topic.php?topic=". $row['topic_name'] ."'><h3>". $row['topic_name'] ."</h3></a>";
-	  echo "</td>";
-	  echo "<td class='date'>".date('d F Y', strtotime($row['date_created']))."</td>";  
-      echo "</tr>";
+
+		$topic_name = $row['topic_name'];
+		$date = date('d F Y', strtotime($row['date_created']));
+		
+	  	echo "<tr>";
+	  	echo "<td class='topic'>";
+	  	echo "<a href='topic.php?topic=". $topic_name ."'><h3>". $topic_name ."</h3></a>";
+	  	echo "</td>";
+	  	echo "<td class='date'>".$date."</td>";  
+      	echo "</tr>";
 	}
 
 	echo "</tbody>";

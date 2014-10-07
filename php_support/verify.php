@@ -1,11 +1,7 @@
 <?php
 	session_start();
-	require_once("db_const.php");
-	$con = mysqli_connect(DB_HOST, DB_USER, DB_PASS, DB_NAME);
-	if (!$con) {
-      die('Could not connect: ' . mysqli_error($con));
-    }
-    mysqli_select_db($con,"forum_db");
+    
+	require 'db_connect.php';
 
     if(isset($_POST['username']) && $_POST['password']){ 
     	$username 		= $_POST['username']; // Get the username 
