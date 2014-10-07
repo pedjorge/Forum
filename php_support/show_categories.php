@@ -43,9 +43,15 @@
 	    echo "<a href='categories.php?category=".$category_ID."'><h3>".$category_name."</h3>";
 	    echo "<p>".$category_description."</p></a>";
 	    echo "</td>";
-	    echo "<td class='last_topic'>";
-	    echo "<a href='topic.php?topic=".$last_topic."'><p>".$last_topic."</p></a>";
-	    echo "</td>";  
+	    if ($last_topic == "") {
+			echo "<td>";
+		    echo "</td>";  
+	    }
+	    else {
+		    echo "<td class='last_topic'>";
+		    echo "<a href='topic.php?topic=".$last_topic."'><p>".$last_topic."</p></a>";
+		    echo "</td>";  
+		}
         echo "</tr>";
 	}
 

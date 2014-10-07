@@ -10,6 +10,7 @@
         <link rel="stylesheet" href="css/global.css">
         <link rel="stylesheet" href="css/categories.css">
         <script src="js/jquery_popup.js"></script>
+        <script src="js/make_row_link.js"></script>
     </head>
     <body>
         <div id="menu">
@@ -60,14 +61,15 @@
             <div id="content">
                 <h2 id="category_name">
                     <?php 
-                        $category_ID = $_GET["category"];
-                        $con = mysqli_connect('localhost','root','','forum_db');
-                        if (!$con) {
-                            die('Could not connect: ' . mysqli_error($con));
-                        }
+                        require 'php_support/db_connect.php';
 
-                        mysqli_select_db($con,"forum_db");
-                        $sql="SELECT * FROM categories WHERE category_ID = '".$category_ID."'";
+                        $category_ID = $_GET["category"];
+                        $sql="SELECT 
+                                category_name 
+                              FROM 
+                                categories 
+                              WHERE 
+                                category_ID = '".$category_ID."'";
                         $result = mysqli_query($con,$sql);
                         $row = mysqli_fetch_array($result);
                         $category_name = $row['category_name'];

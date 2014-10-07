@@ -20,3 +20,11 @@ a { text-decoration: none; }
 .topic {
 	padding: 1%;
 }
+
+#topics tr:hover {
+    background-color: ghostwhite;
+}
+
+#topics td:hover {
+    cursor: pointer;
+}

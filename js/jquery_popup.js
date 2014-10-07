@@ -26,7 +26,7 @@ $(document).ready(function() {
     });
 
 	// Contact form popup send-button click event.
-	$("#send").click(function() {
+	$("#add_category").click(function() {
 		var name = $("#name").val();
 		var description = $("#description").val();
 		if (name == "" || description == ""){
@@ -45,7 +45,6 @@ $(document).ready(function() {
                               + "<p>" + description + "</p></a>";
             cell2.innerHTML = "<p>" + "..." + "</p>";
 	        
-
 	        if (window.XMLHttpRequest) {
 			    // code for IE7+, Firefox, Chrome, Opera, Safari
 			    xmlhttp=new XMLHttpRequest();
@@ -196,20 +195,7 @@ $(document).ready(function() {
             alert("Please Fill All Fields");
         }
         else {
-/*            var table = document.getElementById('posts');
-            var rowCount = table.rows.length;
-            var row = table.insertRow(rowCount);
-            var cell1 = row.insertCell(0);
-                cell1.colSpan = "3";
-                cell1.className = "post reply";
-                cell1.innerHTML = "<div class='author_date'>"
-                                  + "<p class='post_author'>" + name + "</p>"
-                                  + "<p class='date'>posted <span class='time'>Just now</span></p></div>"
-                                  + "<p class='post_message'>" + message + "</p>"
-                                  + "<div class='post_footer'>"
-                                  + "<p class='reply_to_post'>Reply</p>" 
-                                  + "<p class='date full_date'>" + today + "</p></div>";
-*/
+
             if (window.XMLHttpRequest) {
                 // code for IE7+, Firefox, Chrome, Opera, Safari
                 xmlhttp=new XMLHttpRequest();

@@ -70,8 +70,8 @@
                     <label>Category Name: <span>*</span></label>
                     <input type="text" id="name" placeholder="Name" name="category_name" />
                     <label>Category Description:</label>
-                    <textarea id="description" placeholder="Description......." name="description" ></textarea>
-                    <input type="button" id="send" value="Send"/>
+                    <textarea id="description" placeholder="Description......." name="description" maxlength="70"></textarea>
+                    <input type="button" id="add_category" value="Add category"/>
                     <input type="button" id="cancel" value="Cancel"/>
                     <br/>
                 </form>
