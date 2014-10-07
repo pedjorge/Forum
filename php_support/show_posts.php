@@ -91,7 +91,6 @@
             echo "<p class='date'>posted <abbr class='time' title='<?php echo ".date('c', strtotime($time)).";?>'></abbr></p></div>";
             echo "<p class='post_message'>".$post_message."</p>";
             echo "<div class='post_footer'>";
-            echo "<input type='button'  value='Reply' class='reply_to_post' /></p>";
             echo "<p class='date full_date'>".date('d F Y H:i', strtotime($post_date))."</p></div>";
             echo "</td>";  
       		echo "</tr>";

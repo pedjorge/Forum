@@ -59,8 +59,12 @@
         </div>
         <div id="container">
             <div id="content">
+            <h2>Created Topics</h2>
+            <?php include 'php_support/show_created_topics.php'; ?>
             <h2>Starred Topics</h2>
-            <?php include 'php_support/show_starred_topics.php'; ?>
+            <?php include 'php_support/show_starred_topics_posts.php'; ?>
+            <h2>Reply Topics</h2>
+            <?php include 'php_support/show_starred_topics_replies.php'; ?>
             </div>
         </div>
     </body>
