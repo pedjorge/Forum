@@ -39,13 +39,14 @@
                     </li>
                     <li class="Topics menu_item">
                         <img id="menu_image" src="img/topics.png">
-                        <a href="topics.php" class="menu_item_link"><p>Topics</p></a>
+                        <a href="topics.php" class="menu_item_link"><p>All Topics</p></a>
                     </li>
                     <li class="Starred_topics menu_item" style="background-color: lightgrey;">
                         <img id="menu_image" src="img/starred.png">
                         <a href="starred_topics.php" class="menu_item_link"><p style="color:white;">Starred topics</p></a>
                     </li>
                     <li class="Settings menu_item">
+                        <img id="menu_image" src="img/settings.png">
                         <a href="#" class="menu_item_link"><p>Settings</p></a>
                     </li>
                     <li class="Logout">

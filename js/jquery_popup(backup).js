@@ -33,6 +33,17 @@ $(document).ready(function() {
 			alert("Please Fill All Fields");
 		}
 		else {
+            var table = document.getElementById('categories');
+            var rowCount = table.rows.length;
+            var row = table.insertRow(rowCount);
+	     
+            var cell1 = row.insertCell(0);
+            cell1.className = "category";
+            var cell2 = row.insertCell(1);
+            cell2.className = "last_topic";
+            cell1.innerHTML = "<a href='categories.php?id=" + name + "'><h3>" + name + "</h3>" 
+                              + "<p>" + description + "</p></a>";
+            cell2.innerHTML = "<p>" + "..." + "</p>";
 	        
 	        if (window.XMLHttpRequest) {
 			    // code for IE7+, Firefox, Chrome, Opera, Safari
@@ -41,11 +52,8 @@ $(document).ready(function() {
 			    xmlhttp=new ActiveXObject("Microsoft.XMLHTTP");
 			}
 			xmlhttp.onreadystatechange=function() {
-				if (xmlhttp.responseText == 1) {
-					alert("Category name already exists!");
-				}
-				else if (xmlhttp.responseText == 2) {
-					location.reload();
+				if (xmlhttp.readyState==4 && xmlhttp.status==200) {
+					document.getElementById("contactdiv").style.display = "none";
 				}
 			}
 			xmlhttp.open("GET","php_support/insert_category.php?name="+name+"&description="+description,true);
@@ -78,6 +86,17 @@ $(document).ready(function() {
 			alert("Please Fill All Fields");
 		}
 		else {
+            var table = document.getElementById('topics');
+            var rowCount = table.rows.length;
+            var row = table.insertRow(rowCount);
+	     
+            var cell1 = row.insertCell(0);
+            cell1.className = "topic";
+            var cell2 = row.insertCell(1);
+            cell2.className = "date";
+            cell1.innerHTML = "<a href='topic.php?topic=" + name + "'><h3>" + name + "</h3></a>";
+            cell2.innerHTML = dd + " " + monthNames[mm-1] + " " + yyyy;
+
 	        if (window.XMLHttpRequest) {
 			    // code for IE7+, Firefox, Chrome, Opera, Safari
 			    xmlhttp=new XMLHttpRequest();
@@ -85,17 +104,14 @@ $(document).ready(function() {
 			    xmlhttp=new ActiveXObject("Microsoft.XMLHTTP");
 			}
 			xmlhttp.onreadystatechange=function() {
-				if (xmlhttp.responseText == 1) {
-					alert("Topic name already exists!");
-				}
-				else if (xmlhttp.responseText == 2) {
-					location.reload();
+				if (xmlhttp.readyState==4 && xmlhttp.status==200) {
+					document.getElementById("contactdiv").style.display = "none";
 				}
 			}
 			xmlhttp.open("GET","php_support/insert_topic.php?name="+name+"&message="+message+
 						 "&date="+today+"&category="+category,true);
 			xmlhttp.send();
-		}	
+		}
 	});
 
 	// Contact form popup send-button click event.
