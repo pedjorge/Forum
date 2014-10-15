@@ -92,7 +92,8 @@
 					    INNER JOIN users
 					    ON replies.user_ID=users.user_ID
 					    WHERE 
-					    	post_ID = '".$post_ID."'";
+					    	post_ID = '".$post_ID."'
+					    ORDER BY replies.date_created ASC";
 		$result_query_3 = mysqli_query($con,$sql_query_3);
 
 		while($row_query_3 = mysqli_fetch_array($result_query_3)) {
