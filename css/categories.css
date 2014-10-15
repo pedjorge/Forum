@@ -28,3 +28,14 @@ a { text-decoration: none; }
 #topics td:hover {
     cursor: pointer;
 }
+
+#add_topic, #cancel {
+	background-color: #003777;
+	border: 1px solid white;
+	border-radius: 7px;
+	font-weight: bold;
+	font-size: 18px;
+	color: white;
+	width: 49%;
+	padding: 5px;
+}
