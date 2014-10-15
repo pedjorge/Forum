@@ -10,6 +10,7 @@ body {
 	height: 100%;
 	margin:0; 
 	padding:0; 
+	min-width: 1000px;
 }
 
 /*=========================================================================== */
@@ -19,7 +20,7 @@ body {
 #menu {
 	height: 100%;
 	width: 25%;
-	min-width: 239px;
+	min-width: 256px;
 	float: left;
 	background-color: #FAFAFA;
 	box-shadow: 1px 1px 5px ghostwhite;
@@ -34,14 +35,14 @@ body {
 
 div.logo_title {
 	height: 41%;
-	width: 88%;
-	padding: 5.8% 2% 6.2% 14%;
+	width: 91%;
+	padding: 5.8% 2% 6.2% 5%;
 }
 
 .logo {
 	float: left;
-	height: 100%;
-	width: 30%;
+	height: 45px;
+	width: 90px;
 }
 
 img.logo {
@@ -51,8 +52,8 @@ img.logo {
 }
 
 .title {
-	height: 100%;
-	width: 70%;
+	height: 45px;
+	width: 142px;
 	float: left;
 }
 
@@ -119,6 +120,7 @@ div.search_container {
 	font-size: 18px;
 	height: 24px;
 	padding: 0.8% 0 0.8% 15px;
+	margin-top: 3px;
 }
 
 .Logout p {
@@ -154,7 +156,7 @@ div.search_container {
 
 #container{
 	height: 100%;
-	width: 75%;
+	width: 74%;
 	float: left;
 	overflow: auto;
 }

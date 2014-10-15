@@ -50,7 +50,7 @@
                         <img id="menu_image" src="img/starred.png">
                         <a href="starred_topics.php" class="menu_item_link"><p>Starred topics</p></a>
                     </li>
-                    <li class="Settings menu_item" style="margin-top:532px;">
+                    <li class="Settings menu_item">
                         <a href="#" class="menu_item_link"><p>Settings</p></a>
                     </li>
                     <li class="Logout">
