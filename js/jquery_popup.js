@@ -13,10 +13,6 @@ $(document).ready(function() {
 		$("#contactdiv").css("display", "block");
 	});
 
-	$(".reply_to_post").click(function() {
-		$("#replydiv").css("display", "block");
-	});
-
 	$("#contact #cancel").click(function() {
 		$("#contactdiv").css("display", "none");
 	});

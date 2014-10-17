@@ -11,6 +11,7 @@
         <link rel="stylesheet" href="css/global.css">
         <link rel="stylesheet" href="css/topic.css">
         <script src="js/jquery_popup.js"></script>
+        <script src="js/delete.js"></script>
         <script type="text/javascript">
             $(document).ready(function() {
                 $('.time').timeago();
@@ -84,6 +85,14 @@
                     <textarea id="reply_message" placeholder="Message......."></textarea>
                     <input type="button" id="add_reply_to_post" value="Reply"/>
                     <input type="button" id="cancel_reply_to_post" value="Cancel"/>
+                    <br/>
+                </form>
+            </div>
+            <div id="deletediv">
+                <form class="form" action="#" id="delete_form">
+                    <p id="h3"><b>Are you sure you want to delete this post?<b><p>
+                    <input type="button" id="delete_post" value="Yes"/>
+                    <input type="button" id="cancel_delete_post" value="No"/>
                     <br/>
                 </form>
             </div>
