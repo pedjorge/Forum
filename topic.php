@@ -11,7 +11,8 @@
         <link rel="stylesheet" href="css/global.css">
         <link rel="stylesheet" href="css/topic.css">
         <script src="js/jquery_popup.js"></script>
-        <script src="js/delete.js"></script>
+        <script src="js/delete_post.js"></script>
+        <script src="js/delete_reply.js"></script>
         <script type="text/javascript">
             $(document).ready(function() {
                 $('.time').timeago();
@@ -93,6 +94,14 @@
                     <p id="h3"><b>Are you sure you want to delete this post?<b><p>
                     <input type="button" id="delete_post" value="Yes"/>
                     <input type="button" id="cancel_delete_post" value="No"/>
+                    <br/>
+                </form>
+            </div>
+            <div id="delete_div_reply">
+                <form class="form" action="#" id="delete_form">
+                    <p id="h3"><b>Are you sure you want to delete this post?<b><p>
+                    <input type="button" id="delete_reply" value="Yes"/>
+                    <input type="button" id="cancel_delete_reply" value="No"/>
                     <br/>
                 </form>
             </div>

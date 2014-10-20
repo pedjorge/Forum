@@ -101,7 +101,7 @@ a { text-decoration: none; }
 	padding-left: 65px;
 }
 
-#replydiv, #deletediv { 
+#replydiv, #deletediv, #delete_div_reply { 
 	opacity:0.92;
 	position: absolute;
 	top: 0px;
@@ -125,7 +125,7 @@ a { text-decoration: none; }
 	margin-top: -255px;
 }
 
-#add_reply, #cancel, #add_reply_to_post, #cancel_reply_to_post, #cancel_delete_post, #delete_post {
+#add_reply, #cancel, #add_reply_to_post, #cancel_reply_to_post, #cancel_delete_post, #delete_post, #delete_reply, #cancel_delete_reply {
 	background-color: #003777;
 	border: 1px solid white;
 	border-radius: 7px;

@@ -87,6 +87,7 @@
       	echo "</tr>";
 
       	$sql_query_3 = "SELECT 
+      						replies.reply_ID,
       						replies.reply, 
       						replies.date_created, 
       						users.first_name, 
@@ -100,6 +101,7 @@
 		$result_query_3 = mysqli_query($con,$sql_query_3);
 
 		while($row_query_3 = mysqli_fetch_array($result_query_3)) {
+			$reply_ID = $row_query_3['reply_ID']; 
 			$post_message = $row_query_3['reply'];
 			$post_date = $row_query_3['date_created'];
 			$author_fname = $row_query_3['first_name'];
@@ -108,14 +110,18 @@
 			$date_full = date('d-m-Y H:i', strtotime($post_date));
 			$date_simple = date('c', strtotime($date_full));
 
-			echo "<tr>";
-			echo "<td colspan='3' class='post reply'";
+			echo "<tr id='".$reply_ID."' >";
+			echo "<td colspan='3' class='post reply'>";
 			echo "<div class='author_date'>";
-            echo "<p class='post_author'>".$author_fname." ".$author_lname."</p>";
-            echo "<p class='date'>posted <abbr class='time' title='<?php echo ".$date_simple.";?>'></abbr></p></div>";
+		  	echo "<p class='post_author'>".$author_fname." ".$author_lname."</p>";
+		  	echo "<p class='date'>posted <abbr class='time' title='<?php echo ".$date_simple.";?>'></abbr></p>";
+		  	echo "</div>";
             echo "<p class='post_message'>".$post_message."</p>";
             echo "<div class='post_footer'>";
             echo "<p class='date full_date'>".$date_full."</p></div>";
+            if ($author_fname == $_SESSION['fname'] && $author_lname == $_SESSION['lname']) {
+        		echo "<input type='button' value='Delete' class='delete_reply' />";
+            }
             echo "</td>";  
       		echo "</tr>";
 		}
