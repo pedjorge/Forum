@@ -10,6 +10,7 @@
 	width: 12%;
 	border-right: 1px solid #eee;
 	padding: 1%;
+	width: 19%;
 }
 
 #onclick { width: 46px; }
@@ -55,4 +56,52 @@ th { padding: 4px; }
 
 #topics td:hover {
     cursor: pointer;
+}
+
+.delete:hover {
+	background-color: #DE8686;
+}
+
+.delete {
+	height: 100%;
+	width: 100%;
+	margin: -5px 0 -4px -5px;
+	text-align: center;
+	padding: 5px;
+}
+
+#deletediv { 
+	opacity:0.92;
+	position: absolute;
+	top: 0px;
+	left: 0px;
+	height: 100%;
+	width: 100%;
+	background: #000;
+	display: none;
+	z-index: 10;
+}
+
+#delete_form {
+	width: 350px;
+	margin: 0px;
+	background-color: white;
+	position: relative;
+	border: 5px solid rgb(90, 158, 181);
+	left: 50%;
+	top: 50%;
+	margin-left: -210px;
+	margin-top: -255px;
+}
+
+#cancel_delete_topic, #delete_topic {
+	cursor: pointer;
+	background-color: #003777;
+	border: 1px solid white;
+	border-radius: 7px;
+	font-weight: bold;
+	font-size: 18px;
+	color: white;
+	width: 49%;
+	padding: 5px;
 }

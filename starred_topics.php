@@ -10,7 +10,8 @@
         <link rel="stylesheet" href="css/global.css">
         <link rel="stylesheet" href="css/topics.css">
         <script src="js/jquery_popup.js"></script>
-        <script src="js/make_row_link.js"></script>
+        <script src="js/delete_created_topic.js"></script>
+       <!-- <script src="js/make_row_link.js"></script> -->
     </head>
     <body>
         <div id="menu">
@@ -65,6 +66,15 @@
             <h2>Starred Topics</h2>
             <?php include 'php_support/show_starred_topics.php'; ?>
             </div>
+            <div id="deletediv">
+                <form class="form" action="#" id="delete_form">
+                    <p id="h3"><b>Are you sure you want to delete this topic?<b><p>
+                    <input type="button" id="delete_topic" value="Yes"/>
+                    <input type="button" id="cancel_delete_topic" value="No"/>
+                    <br/>
+                </form>
+            </div>
         </div>
+        
     </body>
 </html>
