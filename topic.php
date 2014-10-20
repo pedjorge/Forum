@@ -50,11 +50,7 @@
                     </li>
                     <li class="Starred_topics menu_item">
                         <img id="menu_image" src="img/starred.png">
-                        <a href="starred_topics.php" class="menu_item_link"><p>Starred topics</p></a>
-                    </li>
-                    <li class="Settings menu_item">
-                        <img id="menu_image" src="img/settings.png">
-                        <a href="#" class="menu_item_link"><p>Settings</p></a>
+                        <a href="starred_topics.php" class="menu_item_link"><p>Starred</p></a>
                     </li>
                     <li class="Logout">
                         <a href="php_support/logout.php" class="menu_item_link"><p>Logout</p></a>

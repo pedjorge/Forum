@@ -11,7 +11,7 @@
         <link rel="stylesheet" href="css/topics.css">
         <script src="js/jquery_popup.js"></script>
         <script src="js/delete_created_topic.js"></script>
-       <!-- <script src="js/make_row_link.js"></script> -->
+        <script src="js/make_row_link.js"></script>
     </head>
     <body>
         <div id="menu">
@@ -44,11 +44,7 @@
                     </li>
                     <li class="Starred_topics menu_item" style="background-color: lightgrey;">
                         <img id="menu_image" src="img/starred.png">
-                        <a href="starred_topics.php" class="menu_item_link"><p style="color:white;">Starred topics</p></a>
-                    </li>
-                    <li class="Settings menu_item">
-                        <img id="menu_image" src="img/settings.png">
-                        <a href="#" class="menu_item_link"><p>Settings</p></a>
+                        <a href="starred_topics.php" class="menu_item_link"><p style="color:white;">Starred</p></a>
                     </li>
                     <li class="Logout">
                         <a href="php_support/logout.php" class="menu_item_link"><p>Logout</p></a>

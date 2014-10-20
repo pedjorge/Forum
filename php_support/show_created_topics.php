@@ -47,9 +47,9 @@
 	  	echo "<td class='topic'>";
 	 	echo "<a href='topic.php?topic=".$topic_name."'><h3>".$topic_name."</h3></a>";
 	  	echo "</td>";
-	  	echo "<td class='category'>".$category_name."</td>";
+	  	echo "<td class='category' id='test'>".$category_name."</td>";
 	  	echo "<td class='date'>".$date."</td>";  
-	  	echo "<td><div class='delete' style='height:100%; width:100%'><img src='img/delete.png'></div></td>"; 
+	  	echo "<td><div class='delete'><img src='img/delete.png'></div></td>"; 
       	echo "</tr>";
 	}
 
