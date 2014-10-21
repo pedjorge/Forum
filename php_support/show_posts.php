@@ -79,10 +79,10 @@
 	  	echo "<div class='post_footer'>";
         echo "<p class='reply_to_post'>";
         echo "<input type='button'  value='Reply' class='reply_to_post' /></p>";
-        echo "<p class='date full_date'>".$date_full."</p></div>";
         if ($author_fname == $_SESSION['fname'] && $author_lname == $_SESSION['lname']) {
-        	echo "<input type='button' value='Delete' class='delete_post' />";
+        	echo "<p class='delete_post'><input type='button' value='Delete' class='delete_post' /></p>";
         }
+        echo "<p class='date full_date'>".$date_full."</p></div>";
 	  	echo "</td>";  
       	echo "</tr>";
 
@@ -118,10 +118,10 @@
 		  	echo "</div>";
             echo "<p class='post_message'>".$post_message."</p>";
             echo "<div class='post_footer'>";
-            echo "<p class='date full_date'>".$date_full."</p></div>";
             if ($author_fname == $_SESSION['fname'] && $author_lname == $_SESSION['lname']) {
-        		echo "<input type='button' value='Delete' class='delete_reply' />";
+        		echo "<p class='delete_reply'><input type='button' value='Delete' class='delete_reply' /></p>";
             }
+            echo "<p class='date full_date'>".$date_full."</p></div>";
             echo "</td>";  
       		echo "</tr>";
 		}

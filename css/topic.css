@@ -81,12 +81,12 @@ a { text-decoration: none; }
 	width: 100%;
 }
 
-.reply_to_post {
+.reply_to_post, .delete_post, .delete_reply {
 	color: #003777;
 	background-color: white;
 	border: 1px solid white;
 	float: left;
-	width: 43px;
+	width: 46px;
 	font-weight: bold;
 	cursor: pointer;
 	padding: 0px;
@@ -96,6 +96,7 @@ a { text-decoration: none; }
 }
 
 .reply_to_post:hover { color: #d1d1d1; }
+.delete_post:hover, .delete_reply:hover {color: crimson; }
 
 .reply {
 	padding-left: 65px;
