@@ -280,13 +280,13 @@ textarea {
 }
 
 #contactdiv { 
-	opacity:0.92;
+	opacity:0.98;
 	position: absolute;
 	top: 0px;
 	left: 0px;
 	height: 100%;
 	width: 100%;
-	background: #000;
+	background: ghostwhite;
 	display: none;
 	z-index: 10;
 }

@@ -135,4 +135,5 @@ a { text-decoration: none; }
 	color: white;
 	width: 49%;
 	padding: 5px;
+	cursor: pointer;
 }

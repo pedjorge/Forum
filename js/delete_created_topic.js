@@ -6,13 +6,13 @@ $(document).ready(function() {
 	}
 
 	$("#cancel_delete_topic").click(function() {
-		$("#deletediv").css("display", "none");
+		$("#delete_topic_div").css("display", "none");
 	});
 
 	var topic_ID;
     $('.delete').click(function() {
         topic_ID = $(this).closest('tr').attr('id'); // table row ID 
-        $("#deletediv").css("display", "block");
+        $("#delete_topic_div").css("display", "block");
     });
 
     $("#delete_topic").click(function() {
@@ -25,7 +25,7 @@ $(document).ready(function() {
             
         xmlhttp.onreadystatechange=function() {
             if (xmlhttp.readyState==4 && xmlhttp.status==200) {
-                document.getElementById("#deletediv").style.display = "none";
+                document.getElementById("#delete_topic_div").style.display = "none";
             }
         }
 
