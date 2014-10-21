@@ -50,11 +50,11 @@ th { padding: 4px; }
 
 .created_at { width: 20%; }
 
-#topics tr:hover {
+#topics tr:hover, #categories tr:hover {
     background-color: ghostwhite;
 }
 
-#topics td:hover {
+#topics td:hover, #categories td:hover {
     cursor: pointer;
 }
 
@@ -70,14 +70,14 @@ th { padding: 4px; }
 	padding: 5px;
 }
 
-#deletediv { 
-	opacity:0.92;
+#delete_topic_div, #delete_category_div { 
+	opacity:0.98;
 	position: absolute;
 	top: 0px;
 	left: 0px;
 	height: 100%;
 	width: 100%;
-	background: #000;
+	background: ghostwhite;
 	display: none;
 	z-index: 10;
 }
@@ -94,7 +94,7 @@ th { padding: 4px; }
 	margin-top: -255px;
 }
 
-#cancel_delete_topic, #delete_topic {
+#cancel_delete_topic, #delete_topic, #cancel_delete_category, #delete_category {
 	cursor: pointer;
 	background-color: #003777;
 	border: 1px solid white;
@@ -104,4 +104,9 @@ th { padding: 4px; }
 	color: white;
 	width: 49%;
 	padding: 5px;
+}
+
+.delete_category_td {
+	width: 4.5%;
+	border-left: 1px solid #eee;
 }

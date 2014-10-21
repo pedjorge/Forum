@@ -11,7 +11,8 @@
         <link rel="stylesheet" href="css/topics.css">
         <script src="js/jquery_popup.js"></script>
         <script src="js/delete_created_topic.js"></script>
-        <script src="js/make_row_link.js"></script>
+        <script src="js/delete_created_category.js"></script>
+        <!--<script src="js/make_row_link.js"></script>-->
     </head>
     <body>
         <div id="menu">
@@ -57,16 +58,26 @@
         </div>
         <div id="container">
             <div id="content">
+            <h2>Created Categories</h2>
+            <?php include 'php_support/show_created_categories.php'; ?>
             <h2>Created Topics</h2>
             <?php include 'php_support/show_created_topics.php'; ?>
             <h2>Starred Topics</h2>
             <?php include 'php_support/show_starred_topics.php'; ?>
             </div>
-            <div id="deletediv">
+            <div id="delete_topic_div">
                 <form class="form" action="#" id="delete_form">
                     <p id="h3"><b>Are you sure you want to delete this topic?<b><p>
                     <input type="button" id="delete_topic" value="Yes"/>
                     <input type="button" id="cancel_delete_topic" value="No"/>
+                    <br/>
+                </form>
+            </div>
+            <div id="delete_category_div">
+                <form class="form" action="#" id="delete_form">
+                    <p id="h3"><b>Are you sure you want to delete this category?<b><p>
+                    <input type="button" id="delete_category" value="Yes"/>
+                    <input type="button" id="cancel_delete_category" value="No"/>
                     <br/>
                 </form>
             </div>
