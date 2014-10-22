@@ -81,7 +81,7 @@ a { text-decoration: none; }
 	width: 100%;
 }
 
-.reply_to_post, .delete_post, .delete_reply {
+.reply_to_post, .delete_post, .delete_reply, .reply_to_reply {
 	color: #003777;
 	background-color: white;
 	border: 1px solid white;
@@ -95,7 +95,7 @@ a { text-decoration: none; }
 	font-size: 15px;
 }
 
-.reply_to_post:hover { color: #d1d1d1; }
+.reply_to_post:hover, .reply_to_reply:hover { color: #d1d1d1; }
 .delete_post:hover, .delete_reply:hover {color: crimson; }
 
 .reply {
@@ -103,13 +103,13 @@ a { text-decoration: none; }
 }
 
 #replydiv, #deletediv, #delete_div_reply { 
-	opacity:0.92;
+	opacity:0.99;
 	position: absolute;
 	top: 0px;
 	left: 0px;
 	height: 100%;
 	width: 100%;
-	background: #000;
+	background: ghostwhite;
 	display: none;
 	z-index: 10;
 }

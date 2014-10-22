@@ -118,6 +118,8 @@
 		  	echo "</div>";
             echo "<p class='post_message'>".$post_message."</p>";
             echo "<div class='post_footer'>";
+            echo "<p class='reply_to_reply'>";
+        	echo "<input type='button'  value='Reply' class='reply_to_reply' /></p>";
             if ($author_fname == $_SESSION['fname'] && $author_lname == $_SESSION['lname']) {
         		echo "<p class='delete_reply'><input type='button' value='Delete' class='delete_reply' /></p>";
             }
