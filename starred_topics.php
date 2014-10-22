@@ -12,7 +12,7 @@
         <script src="js/jquery_popup.js"></script>
         <script src="js/delete_created_topic.js"></script>
         <script src="js/delete_created_category.js"></script>
-        <!--<script src="js/make_row_link.js"></script>-->
+        <script src="js/make_row_link.js"></script>
     </head>
     <body>
         <div id="menu">

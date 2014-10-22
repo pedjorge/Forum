@@ -17,7 +17,7 @@
 
 	$result_query_1 = mysqli_query($con,$sql_query_1);
 
-	echo "<table id='topics' class='gradient-style'>
+	echo "<table id='starred_topics' class='gradient-style'>
             <thead>
                 <tr>
                     <th scope='col'>Topic</th>
