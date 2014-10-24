@@ -1,42 +1,19 @@
-#onclick {
-	width: 78px;
-}
+/*------------------------------ ADD -------------------------------- */
 
-#created_at {
-	width: 14%;
-}
+#onclick {	width: 78px; }
+.add {	margin-right: 5.2%; }
 
-.date {
-	text-align: center;
-}
+/*---------------------------- TABLE -------------------------------- */
 
-.add {
-	margin-right: 5.2%;
-}
-
-a { text-decoration: none; }
-.topic:hover { background-color: ghostwhite; }
-
-.topic {
-	padding: 1%;
-}
-
-#topics tr:hover {
-    background-color: ghostwhite;
-}
-
-#topics td:hover {
-    cursor: pointer;
-}
-
-#add_topic, #cancel {
-	background-color: #003777;
-	border: 1px solid white;
-	border-radius: 7px;
-	font-weight: bold;
-	font-size: 18px;
-	color: white;
-	width: 49%;
-	padding: 5px;
+#topics tr:hover { 
+	background-color: ghostwhite;
 	cursor: pointer;
 }
+
+.topic { padding: 1%; }
+.topic:hover { background-color: ghostwhite; }
+.date {	text-align: center; }
+
+/*---------------------------- LINKS -------------------------------- */
+
+a { text-decoration: none; }

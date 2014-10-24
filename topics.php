@@ -2,6 +2,11 @@
 <?php
     // continue the session
     session_start();
+
+    // User authentication
+    if (!(isset($_SESSION['login']) && $_SESSION['login'] != '')) {
+        header ("Location: login.php");
+    }
 ?>
 <html>
     <head>
@@ -9,7 +14,6 @@
         <link href='http://fonts.googleapis.com/css?family=Lato&subset=latin,latin-ext' rel='stylesheet' type='text/css'>
         <link rel="stylesheet" href="css/global.css">
         <link rel="stylesheet" href="css/topics.css">
-        <script src="js/jquery_popup.js"></script>
         <script src="js/make_row_link.js"></script>
     </head>
     <body>

@@ -5,6 +5,7 @@
         <link href='http://fonts.googleapis.com/css?family=Lato&subset=latin,latin-ext' rel='stylesheet' type='text/css'>
         <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
         <script src="js/register.js"></script>
+        <script src="js/get_XmlHttp.js"></script>
     </head>
     <body>   
         <div class="logo_title">

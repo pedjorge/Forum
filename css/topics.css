@@ -1,8 +1,20 @@
-#posts {
-	border-collapse: collapse;
-	height: 20%;
-	margin-top: 50px;
+/*=========================================================================== */
+/*----------------------------- TOPICS.PHP ---------------------------------- */
+/*=========================================================================== */
+
+/*--------------------------------- TABLE ----------------------------------- */
+
+#topics tr:hover, #starred_topics tr:hover {
+    background-color: ghostwhite;
 }
+
+#topics td:hover, #starred_topics td:hover {
+    cursor: pointer;
+}
+
+th { padding: 4px; }
+
+.category {	text-align: center; }
 
 .date {
 	color: black;
@@ -13,52 +25,25 @@
 	width: 19%;
 }
 
-#onclick { width: 46px; }
+/*=========================================================================== */
+/*------------------------- STARRED-TOPICS.PHP ------------------------------ */
+/*=========================================================================== */
 
-#topic_message td{
+/*--------------------------------- TABLE ----------------------------------- */
+
+#created_topics td:first-child:hover, #categories td:first-child:hover { background-color: ghostwhite; }
+
+.delete_category_td {
+	width: 4.5%;
+	border-left: 1px solid #eee;
+	text-align: center;
+}
+
+#topic_message td {
 	height: 100px;
 	text-align: justify;
 	padding: 20px;
 }
-
-.message_author {
-	color: cadetblue;
-	font-size: 17px;
-	font-weight: bold;
-	font-style: italic;
-	text-decoration: underline;
-	margin-bottom: 5px;
-}
-
-.message_date {
-	text-align: right;
-	color: black;
-}
-
-.message {
-	padding: 1%;
-	text-align: justify;
-}
-
-.add { margin: 3% 0 0 0; }
-
-a { text-decoration: none; }
-
-th { padding: 4px; }
-
-.category {	text-align: center; }
-
-.created_at { width: 20%; }
-
-#topics tr:hover, #starred_topics tr:hover {
-    background-color: ghostwhite;
-}
-
-#topics td:hover, #starred_topics td:hover {
-    cursor: pointer;
-}
-
-#created_topics td:first-child:hover, #categories td:first-child:hover { background-color: ghostwhite;}
 
 .delete:hover, .delete_category_td:hover {
 	background-color: #DE8686;
@@ -73,44 +58,11 @@ th { padding: 4px; }
 	padding: 5px;
 }
 
-#delete_topic_div, #delete_category_div { 
-	opacity:0.98;
-	position: absolute;
-	top: 0px;
-	left: 0px;
-	height: 100%;
-	width: 100%;
-	background: ghostwhite;
-	display: none;
-	z-index: 10;
-}
+/*-------------------------------- ADD -------------------------------- */
 
-#delete_form {
-	width: 350px;
-	margin: 0px;
-	background-color: white;
-	position: relative;
-	border: 5px solid rgb(90, 158, 181);
-	left: 50%;
-	top: 50%;
-	margin-left: -210px;
-	margin-top: -255px;
-}
+#onclick { width: 46px; }
+.add { margin: 3% 0 0 0; }
 
-#cancel_delete_topic, #delete_topic, #cancel_delete_category, #delete_category {
-	cursor: pointer;
-	background-color: #003777;
-	border: 1px solid white;
-	border-radius: 7px;
-	font-weight: bold;
-	font-size: 18px;
-	color: white;
-	width: 49%;
-	padding: 5px;
-}
+/*------------------------------ LINKS -------------------------------- */
 
-.delete_category_td {
-	width: 4.5%;
-	border-left: 1px solid #eee;
-	text-align: center;
-}
+a { text-decoration: none; }

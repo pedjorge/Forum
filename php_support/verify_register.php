@@ -4,12 +4,11 @@
 
     if(isset($_POST['username'])) {
         $username    = $_POST['username'];
-        $password    = $_POST['password'];
+        $password    = md5($_POST['password']);
         $first_name  = $_POST['firstname'];
         $last_name   = $_POST['lastname'];
         $email       = $_POST['email'];
                  
-        # check if username and email exist else insert
         $exists = 0;
         $result = mysqli_query($con, "SELECT 
                                         username 

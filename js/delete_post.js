@@ -11,7 +11,7 @@ $(document).ready(function() {
 
 	var post_ID;
     $('.delete_post').click(function() {
-        post_ID = $(this).closest('tr').attr('id'); // table row ID 
+        post_ID = $(this).closest('li').attr('id'); // table row ID 
         $("#deletediv").css("display", "block");
     });
 

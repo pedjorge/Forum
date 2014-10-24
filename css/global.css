@@ -1,3 +1,7 @@
+/*=========================================================================== */
+/*-------------------------------- GLOBAL ----------------------------------- */
+/*=========================================================================== */
+
 * {
      margin: 0;
 }
@@ -57,7 +61,7 @@ img.logo {
 	float: left;
 }
 
-h1{
+#menu h1 {
 	line-height: 50px;
 	position: relative;
 	left: 20px;
@@ -74,23 +78,7 @@ div.search_container {
 	width: 100%;
 }
 
-.menu_item {
-	height: 4.8%;
-	min-height: 30px;
-	width: 101%;
-	background-color: white;
-	margin-top: 3px;
-	text-align: left;
-	font-family: 'Lato', serif;
-}
-
-.menu_item p {
-	padding: 4px 0 0 15px;
-	font-weight: bold;
-	font-size: 18px;
-	color: #003777;
-	height: 85.9%;
-}
+/*------------------------------ NAVIGATION ---------------------------------- */
 
 #navigation {
 	height: 78.5%;
@@ -113,6 +101,32 @@ div.search_container {
 	height: 24px;
 }
 
+.menu_item {
+	height: 4.8%;
+	min-height: 30px;
+	width: 101%;
+	background-color: white;
+	margin-top: 3px;
+	text-align: left;
+	font-family: 'Lato', serif;
+}
+
+.menu_item p {
+	padding: 4px 0 0 15px;
+	font-weight: bold;
+	font-size: 18px;
+	color: #003777;
+	height: 85.9%;
+}
+
+.menu_item:hover { background-color: lightgrey; }
+.menu_item:hover p { color: white; }
+
+#menu_image {
+	margin: 5px 10px 6px 17px;
+	float: left;
+}
+
 .Logout {
 	background-color: white;
 	font-family: 'Lato', serif;
@@ -123,25 +137,11 @@ div.search_container {
 	margin-top: 3px;
 }
 
-.Logout p {
-	color: red;
-}
-
+.Logout p {	color: red; }
 .Logout:hover {	background-color: red; }
 .Logout:hover p { color: white; }
 
-.menu_item:hover {
-	background-color: lightgrey;
-}
-
-.menu_item:hover p {
-	color: white;
-}
-
-#menu_image {
-	margin: 5px 10px 6px 17px;
-	float: left;
-}
+/*------------------------------ FOOTER ---------------------------------- */
 
 #footer {
 	padding: 3%;
@@ -169,46 +169,24 @@ div.search_container {
 	padding-top: 13px;
 }
 
+/*------------------------------ TABLE ---------------------------------- */
+
 table {
     width: 95%;
 	margin-left: 3%;
 }
 
-tbody {
-	height: 100%;
-}
+table p { margin: 0; }
+tbody {	height: 100%; }
 
 th, td {
     padding: 5px;
     text-align: left;
 }
 
-.last_topic {
-	text-align: center;
-	font-style: italic;
-}
-
-h3 {
-	margin: 0;
-}
-
-table p {
-	margin: 0;
-	color: #5f5f5f;
-}
-
-h2 {
-	padding: 2% 5.3%;
-	font-family: 'Lato', serif;
-	text-transform: uppercase;
-	font-style: italic;
-	color: darkgray;
-	font-size: 29px;
-}
-
 .gradient-style {
 	font-family: 'Lato', serif;
-	font-size: 13px;
+	font-size: 1em;
 }
 
 .gradient-style th {
@@ -218,13 +196,20 @@ h2 {
 	font-size: 20px;
 }
 
-.gradient-style tr {
-	height: 100%;
+.gradient-style tr { height: 100%; }
+.gradient-style td { border-bottom: 1px solid #eee; }
+
+h3 { margin: 0; }
+h2 {
+	padding: 2% 5.3%;
+	font-family: 'Lato', serif;
+	text-transform: uppercase;
+	font-style: italic;
+	color: darkgray;
+	font-size: 29px;
 }
 
-.gradient-style td {
-	border-bottom: 1px solid #eee;
-}
+/*------------------------------ ADD ---------------------------------- */
 
 .add {
 	font-family: 'Lato', serif;
@@ -233,7 +218,7 @@ h2 {
 	margin-top: 2%;
 }
 
-#onclick{
+#onclick {
 	padding:3px;
 	color:green;
 	cursor:pointer;
@@ -245,8 +230,32 @@ h2 {
 	border-radius:3px;
 }
 
-#popup{
-	padding-top:80px;
+#popup { padding-top:80px; }
+
+/*------------------------------ FORM ---------------------------------- */
+
+#contactdiv, #creatediv, #replydiv, #deletediv, #delete_topic_div, #delete_category_div  { 
+	opacity:0.98;
+	position: absolute;
+	top: 0px;
+	left: 0px;
+	height: 100%;
+	width: 100%;
+	background: ghostwhite;
+	display: none;
+	z-index: 10;
+}
+
+#contact, #create, #reply_form, #delete_form {
+	width:350px;
+	margin:0px;
+	background-color:white;
+	position: relative;
+	border: 5px solid rgb(90, 158, 181);
+	left: 50%;
+	top: 50%;
+	margin-left:-210px;
+	margin-top:-255px;
 }
 
 .form {
@@ -259,6 +268,14 @@ h2 {
 	width:350px;
 	margin:20px 250px 0 35px;
 	float:left;
+}
+
+#h3 {
+	color: #003777;
+	font-size: 19px;
+	text-transform: uppercase;
+	text-align: center;
+	margin: 5px 0 15px 0;
 }
 
 input[type=text] {
@@ -279,36 +296,16 @@ textarea {
 	resize:none;
 }
 
-#contactdiv { 
-	opacity:0.98;
-	position: absolute;
-	top: 0px;
-	left: 0px;
-	height: 100%;
-	width: 100%;
-	background: ghostwhite;
-	display: none;
-	z-index: 10;
-}
-
-#h3 {
-	color: #003777;
-	font-size: 19px;
-	text-transform: uppercase;
-	text-align: center;
-	margin: 5px 0 15px 0;
-}
-
-#contact {
-	width:350px;
-	margin:0px;
-	background-color:white;
-	position: relative;
-	border: 5px solid rgb(90, 158, 181);
-	left: 50%;
-	top: 50%;
-	margin-left:-210px;
-	margin-top:-255px;
+#add_category, #add_topic, #add_reply, #delete_post, #cancel_delete_post, #cancel_delete_topic, #delete_topic, #cancel_delete_category, #delete_category, #cancel {
+	background-color: #003777;
+	border: 1px solid white;
+	border-radius: 7px;
+	font-weight: bold;
+	font-size: 18px;
+	color: white;
+	width: 49%;
+	padding: 5px;
+	cursor: pointer;
 }
 
 /*----------------------------------LINKS-------------------------------------*/
@@ -318,29 +315,3 @@ a:visited { color: cadetblue; }
 a:active { color: cadetblue; }
 
 .last_topic a {	color: black; }
-
-/*=========================================================================== */
-/*--------------------------------- FOOTER ---------------------------------- */
-/*=========================================================================== */
-.push {
-	height: 6%;
-}
-
-footer{
-	height:6%; 
-	width:100%; 
-	border-top: 1px solid #d1d1d1;
-	bottom:0; 
-	left:0; 
-	background-color: #fff;
-	line-height:60px; 
-	margin:50px auto 0 auto; 
-}
-
-footer ul, ul li, ul li a{margin: 0; padding: 0; border: none;}
-footer ul li{list-style: none; display: inline; float: left;}
-footer ul li a{text-decoration: none; color:#003777;}
-footer ul li a:hover{text-decoration: underline;}
-footer ul{width:100%; height: auto;}
-footer ul li.first{color: #d1d1d1; padding: 0 0 0 2%;}
-footer ul li.last{float:right; font-weight:bold; padding: 15px 0 0 10px;}

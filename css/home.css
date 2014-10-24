@@ -1,29 +1,25 @@
-#onclick {
-	width: 113px;
-}
+/*------------------------------ TABLE -------------------------------- */
 
-.add {
-	margin-right: 5.2%;
-}
-
-a { text-decoration: none; }
 .category:hover { background-color: ghostwhite; }
 .category h3 { text-decoration: underline; }
+
+.last_topic {
+	text-align: center;
+	font-style: italic;
+}
 
 .last_topic p {
 	height: 34px;
 	line-height: 33px;
 }
+
 .last_topic:hover { background-color: ghostwhite; }
 
-#add_category, #cancel {
-	background-color: #003777;
-	border: 1px solid white;
-	border-radius: 7px;
-	font-weight: bold;
-	font-size: 18px;
-	color: white;
-	width: 49%;
-	padding: 5px;
-	cursor: pointer;
-}
+/*------------------------------ ADD ---------------------------------- */
+
+#onclick {	width: 113px; }
+.add { margin-right: 5.2%; }
+
+/*------------------------------ LINKS -------------------------------- */
+
+a { text-decoration: none; }

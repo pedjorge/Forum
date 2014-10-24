@@ -5,34 +5,20 @@
     require 'db_connect.php';
     
 	/* INSERT INTO DB */
-	$user_name = $_SESSION["username"];
+	$user_ID = $_SESSION["user_ID"];
+    $parent_ID = $_GET['parent_ID'];
 	$message = $_GET['message'];
 	$date = $_GET['date'];
-	$topic_name = $_GET['topic_name'];
 
-    $sql_query_1="SELECT 
-    				user_ID 
-    			FROM 
-    				users 
-    			WHERE 
-    				username = '".$user_name."'";
-    $result_query_1 = mysqli_query($con,$sql_query_1);
-    $row_query_1 = mysqli_fetch_array($result_query_1);
-    $user_ID = $row_query_1['user_ID'];
-
-    $sql_query_2="SELECT 
-    				topic_ID 
-    			FROM 
-    				topics 
-    			WHERE 
-    				topic_name = '".$topic_name."'";
-    $result_query_2 = mysqli_query($con,$sql_query_2);
-    $row_query_2 = mysqli_fetch_array($result_query_2);
-    $topic_ID = $row_query_2['topic_ID'];
+	$sql_select="SELECT topic_ID FROM topics WHERE topic_name = '".$_GET['topic_name']."'";
+	$result = mysqli_query($con,$sql_select);
+	$row = mysqli_fetch_array($result);
+	$topic_ID = $row['topic_ID'];
 
 	mysqli_select_db($con,"forum_db");
-	$sql_query_3="INSERT INTO posts (topic_ID, user_ID, message, date_created) 
-		  VALUES ('".$topic_ID."', '".$user_ID."','".$message."', '".date('Y-m-d H:i:s', strtotime($date))."')";
-	mysqli_query($con,$sql_query_3);
+	$sql_insert="INSERT INTO 
+                    posts (topic_ID, parent_ID, user_ID, message, date_created) 
+		        VALUES ('".$topic_ID."','".$parent_ID."', '".$user_ID."','".$message."', '".date('Y-m-d H:i:s', strtotime($date))."')";
+	mysqli_query($con,$sql_insert);
 	mysqli_close($con);
 ?>

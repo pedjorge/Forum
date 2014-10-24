@@ -2,6 +2,11 @@
 <?php
     // continue the session
     session_start();
+
+    // User authentication
+    if (!(isset($_SESSION['login']) && $_SESSION['login'] != '')) {
+        header ("Location: login.php");
+    }
 ?>
 <html>
     <head>
@@ -9,7 +14,8 @@
         <link href='http://fonts.googleapis.com/css?family=Lato&subset=latin,latin-ext' rel='stylesheet' type='text/css'>
         <link rel="stylesheet" href="css/global.css">
         <link rel="stylesheet" href="css/categories.css">
-        <script src="js/jquery_popup.js"></script>
+        <script src="js/create_topic.js"></script>
+        <script src="js/get_Date.js"></script>
         <script src="js/make_row_link.js"></script>
     </head>
     <body>
@@ -80,8 +86,8 @@
                     <p id="onclick">Add Topic</p>
                 </div>
             </div>
-            <div id="contactdiv">
-                <form class="form" action="#" id="contact">
+            <div id="creatediv">
+                <form class="form" action="#" id="create">
                     <p id="h3"><b>Create Topic<b><p>
                     <label>Topic Name: <span>*</span></label>
                     <input type="text" id="name" placeholder="Name"/>

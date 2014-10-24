@@ -2,6 +2,11 @@
 <?php
     // continue the session
     session_start();
+
+    // User authentication
+    if (!(isset($_SESSION['login']) && $_SESSION['login'] != '')) {
+        header ("Location: login.php");
+    }
 ?>
 <html>
     <head>
@@ -10,9 +15,9 @@
         <link href='http://fonts.googleapis.com/css?family=Lato&subset=latin,latin-ext' rel='stylesheet' type='text/css'>
         <link rel="stylesheet" href="css/global.css">
         <link rel="stylesheet" href="css/topic.css">
-        <script src="js/jquery_popup.js"></script>
+        <script src="js/reply_to_post.js"></script>
+        <script src="js/get_Date.js"></script>
         <script src="js/delete_post.js"></script>
-        <script src="js/delete_reply.js"></script>
         <script type="text/javascript">
             $(document).ready(function() {
                 $('.time').timeago();
@@ -63,10 +68,10 @@
         </div>
         <div id="container">
             <div id="content">
-            <?php include 'php_support/show_posts.php'; ?>
+            <?php include 'php_support/show_replies.php'; ?>
             </div>
-            <div id="contactdiv">
-                <form class="form" action="#" id="contact">
+            <div id="replydiv">
+                <form class="form" action="#" id="reply_form">
                     <p id="h3"><b>Reply<b><p>
                     <label>Message:</label>
                     <textarea id="message" placeholder="Message......."></textarea>
@@ -75,29 +80,11 @@
                     <br/>
                 </form>
             </div>
-            <div id="replydiv">
-                <form class="form" action="#" id="reply_form">
-                    <p id="h3"><b>Reply<b><p>
-                    <label>Message:</label>
-                    <textarea id="reply_message" placeholder="Message......."></textarea>
-                    <input type="button" id="add_reply_to_post" value="Reply"/>
-                    <input type="button" id="cancel_reply_to_post" value="Cancel"/>
-                    <br/>
-                </form>
-            </div>
             <div id="deletediv">
                 <form class="form" action="#" id="delete_form">
                     <p id="h3"><b>Are you sure you want to delete this post?<b><p>
                     <input type="button" id="delete_post" value="Yes"/>
                     <input type="button" id="cancel_delete_post" value="No"/>
-                    <br/>
-                </form>
-            </div>
-            <div id="delete_div_reply">
-                <form class="form" action="#" id="delete_form">
-                    <p id="h3"><b>Are you sure you want to delete this post?<b><p>
-                    <input type="button" id="delete_reply" value="Yes"/>
-                    <input type="button" id="cancel_delete_reply" value="No"/>
                     <br/>
                 </form>
             </div>

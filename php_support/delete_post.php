@@ -6,12 +6,6 @@
 	$post_ID = $_GET['post_ID'];
 
 	$sql = "DELETE FROM 
-				replies
-			WHERE
-				post_ID ='".$post_ID."'";
-	mysqli_query($con,$sql);
-
-	$sql = "DELETE FROM 
 				posts
 			WHERE 
 				post_ID ='".$post_ID."'";
